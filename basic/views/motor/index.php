@@ -44,15 +44,34 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            [
+                'attribute' => 'id',
+                'value' => 'id',
+                'contentOptions'=>['style'=>'width: 75px;'],
+            ],
             [
                 'attribute' => 'nama',
                 'value' => 'jenisMotor0.nama',
             ],
-            'warna',
-            //'no_totok',
+            [
+                'attribute' => 'warna',
+                'value' => 'warna',
+                'contentOptions'=>['style'=>'width: 125px;'],
+            ],
+            [
+                'attribute' => 'no_totok',
+                'value' => 'no_totok',
+                'contentOptions'=>['style'=>'width: 75px;'],
+            ],
             'no_rangka',
             'no_mesin',
+            [
+                'attribute' => 'posisi',
+                'value' => 'posisiMotor0.posisi',
+                //'contentOptions'=>['style'=>'width: 130px;'],
+                'filter' => Html::activeDropDownList($searchModel, 'posisi', \yii\helpers\ArrayHelper::map(\app\models\PosisiMotor::find()->select('posisi')->distinct()->all(), 'posisi','posisi'),
+                    ['class'=>'form-control','prompt' => 'Semua']),
+            ],
             // 'tahun',
             // 'id_jenis',
             [
@@ -71,7 +90,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 }],
             //'keterangan',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => \yii\grid\ActionColumn::className(),'template'=>'{delete} {update}' ],
         ],
     ]);
 

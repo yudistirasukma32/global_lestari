@@ -17,12 +17,13 @@ class MotorSearch extends Motor
      */
 
     public $nama;
+    public $posisi;
 
     public function rules()
     {
         return [
             [['id', 'id_jenis'], 'integer'],
-            [['warna', 'no_totok', 'no_rangka', 'no_mesin', 'tahun', 'keterangan', 'status', 'nama'], 'safe'],
+            [['warna', 'no_totok', 'no_rangka', 'no_mesin', 'tahun', 'keterangan', 'status', 'nama', 'posisi'], 'safe'],
         ];
     }
 
@@ -46,6 +47,7 @@ class MotorSearch extends Motor
     {
         $query = Motor::find();
         $query->joinWith(['jenisMotor0']);
+        $query->innerJoinWith(['posisiMotor0']);
 
         // add conditions that should always apply here
 
@@ -56,6 +58,11 @@ class MotorSearch extends Motor
         $dataProvider->sort->attributes['nama']=[
             'asc'=>['jenis_motor.nama' => SORT_ASC],
             'desc'=>['jenis_motor.nama'=> SORT_DESC],
+        ];
+
+        $dataProvider->sort->attributes['posisi']=[
+            'asc'=>['posisi_motor.posisi' => SORT_ASC],
+            'desc'=>['posisi_motor.posisi'=> SORT_DESC],
         ];
 
         $this->load($params);
@@ -69,16 +76,18 @@ class MotorSearch extends Motor
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
+            'no_totok' => $this->no_totok,
             //'id_jenis' => $this->id_jenis,
         ]);
 
         $query->andFilterWhere(['like', 'warna', $this->warna])
-            ->andFilterWhere(['like', 'no_totok', $this->no_totok])
+            //->andFilterWhere(['like', 'no_totok', $this->no_totok])
             ->andFilterWhere(['like', 'no_rangka', $this->no_rangka])
             ->andFilterWhere(['like', 'no_mesin', $this->no_mesin])
             ->andFilterWhere(['like', 'tahun', $this->tahun])
             ->andFilterWhere(['like', 'keterangan', $this->keterangan])
             ->andFilterWhere(['like', 'nama', $this->nama])
+            ->andFilterWhere(['like', 'posisi', $this->posisi])
             ->andFilterWhere(['like', 'status', $this->status]);
 
         return $dataProvider;

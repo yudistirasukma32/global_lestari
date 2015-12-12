@@ -30,7 +30,7 @@ class Pembeli extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nama', 'no_ktp', 'alamat', 'kota', 'no_tlp'], 'required'],
+            [['nama'], 'required'],
             [['nama', 'kota'], 'string', 'max' => 50],
             [['no_ktp'], 'string', 'max' => 20],
             [['alamat'], 'string', 'max' => 100],

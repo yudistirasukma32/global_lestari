@@ -38,7 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'jenisMotor0.nama',
                 'value' => 'motor0.jenisMotor0.nama',
             ],
-            'id_motor',
+            [
+                'attribute' => 'id_motor',
+                'value' => 'id_motor',
+                'contentOptions'=>['style'=>'width: 75px;'],
+            ],
             [
                 'attribute' => 'nama',
                 'value' => 'pembeli0.nama',

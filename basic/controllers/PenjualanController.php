@@ -72,7 +72,8 @@ class PenjualanController extends Controller
            //$id_motor = Yii::$app->request->post(id_motor);
             Yii::$app->db->createCommand('UPDATE motor SET status="laku" WHERE id='.$id_motor)
                 ->execute();
-
+            Yii::$app->db->createCommand('UPDATE posisi_motor SET posisi="Lain-lain" WHERE id_motor='.$id_motor)
+                ->execute();
             return $this->redirect(['view', 'id' => $model->id]);
 
         } else {

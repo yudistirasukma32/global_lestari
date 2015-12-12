@@ -27,10 +27,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
             //'id',
             [
+                'attribute' => 'id_motor',
+                'value' => 'id_motor',
+                'contentOptions'=>['style'=>'width: 75px;'],
+            ],
+            [
                 'attribute' => 'jenisMotor0.nama',
                 'value' => 'motor0.jenisMotor0.nama',
             ],
-            'id_motor',
+            [
+                'attribute' => 'no_totok',
+                'value' => 'motor0.no_totok',
+                'contentOptions'=>['style'=>'width: 75px;'],
+            ],
             [
                 'attribute' => 'no_rangka',
                 'value' => 'motor0.no_rangka',
@@ -58,7 +67,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 }],
             'keterangan:ntext',
 
-            ['class' => 'yii\grid\ActionColumn'],
+            ['class' => \yii\grid\ActionColumn::className(),'template'=>'{delete} {update}' ],
         ],
     ]); ?>
 

@@ -32,6 +32,11 @@ class Motor extends \yii\db\ActiveRecord
         return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis']);
     }
 
+    public function getPosisiMotor0()
+    {
+        return $this->hasOne(PosisiMotor::className(), ['id_motor' => 'id']);
+    }
+
     /**
      * @inheritdoc
      */
@@ -63,7 +68,8 @@ class Motor extends \yii\db\ActiveRecord
             'keterangan' => 'Keterangan',
             'id_jenis' => 'Id Jenis',
             'status' => 'Status',
-            'nama' => 'Jenis Motor'
+            'nama' => 'Jenis Motor',
+            'posisi' => 'Posisi',
         ];
     }
 }
