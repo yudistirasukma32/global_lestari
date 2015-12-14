@@ -160,14 +160,17 @@ class MotorController extends Controller
 
     public function actionSurabaya(){
         $connection = \Yii::$app->db;
-        $sql = 'SELECT a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
                 INNER JOIN posisi_motor b
                 ON a.id = b.id_motor
                 INNER JOIN kondisi_motor c
                 ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Kantor Surabaya"';
+                b.posisi = "Kantor Surabaya"
+                ORDER by d.nama,a.id';
 
         $model = $connection->createCommand($sql);
         $sby = $model->queryAll();
@@ -178,10 +181,12 @@ class MotorController extends Controller
         echo '<table border="1" width="100%">
         <p style="text-align: center;">LAPORAN DATA STOK MOTOR <br/> KANTOR SURABAYA </p><br/><br/>
         <p>';
+        echo '</p><p>';
         echo date('d/m/Y');
         echo'</p>
         <thead>
             <tr>
+                <th>JENIS MOTOR</th>
                 <th>ID MOTOR</th>
                 <th>WARNA</th>
                 <th>NO TOTOK</th>
@@ -195,6 +200,7 @@ class MotorController extends Controller
         foreach($sby as $data){
             echo '
                 <tr>
+                    <td>'.$data['nama'].'</td>
                     <td>'.$data['id'].'</td>
                     <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
@@ -211,14 +217,17 @@ class MotorController extends Controller
 
     public function actionJakarta(){
         $connection = \Yii::$app->db;
-        $sql = 'SELECT a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
                 INNER JOIN posisi_motor b
                 ON a.id = b.id_motor
                 INNER JOIN kondisi_motor c
                 ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Kantor Jakarta"';
+                b.posisi = "Kantor Jakarta"
+                ORDER by d.nama,a.id';
 
         $model = $connection->createCommand($sql);
         $sby = $model->queryAll();
@@ -232,6 +241,7 @@ class MotorController extends Controller
         echo'</p>
         <thead>
             <tr>
+                <th>JENIS MOTOR</th>
                 <th>ID MOTOR</th>
                 <th>WARNA</th>
                 <th>NO TOTOK</th>
@@ -245,6 +255,7 @@ class MotorController extends Controller
         foreach($sby as $data){
             echo '
                 <tr>
+                    <td>'.$data['nama'].'</td>
                     <td>'.$data['id'].'</td>
                     <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
