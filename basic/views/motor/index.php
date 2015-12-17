@@ -10,6 +10,15 @@ use yii\grid\GridView;
 $this->title = 'Data Motor';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<?php
+
+//use app\models\Country;
+$jenismotor=\app\models\JenisMotor::find()->all();
+$listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
+
+?>
+
 <div class="motor-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -22,21 +31,81 @@ $this->params['breadcrumbs'][] = $this->title;
             <td style="padding-left:10px;"><div class="btn-group">
 
                     <!-- Single button -->
-                    <div class="btn-group">
+                   <!-- <div class="btn-group">
                         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Download Data Stok Motor <span class="caret"></span>
                         </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="surabaya">Data Stok Surabaya</a></li>
-                        <li><a href="jakarta">Data Stok Jakarta</a></li>
-                        <li><a href="pabrik">Data Stok Pabrik</a></li>
-                        <!--<li role="separator" class="divider"></li>
-                        <li><a href="#">#</a></li>-->
-                    </ul>
-                </div></td>
+                </div>-->
+                </td>
+            <td>
+
+                <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Download Stok Surabaya
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" style="background:#f1f1f1;">
+                            <li><a href="surabayab-ravo">BEIJING BRAVO M/T 100cc</a></li>
+                            <li><a href="surabaya-trooper">BEIJING TROOPER M/T 200cc</a></li>
+                            <li><a href="surabaya-maxi">BEIJING MAXI M/T 125cc</a></li>
+                            <li><a href="surabaya-exotic">BEIJING EXOTIC A/T 125cc</a></li>
+                            <li><a href="surabaya-scootic">BEIJING SCOOTIC A/T 125cc</a></li>
+                            <li><a href="surabaya-arjuna">JRD ARJUNA-X M/T 100cc</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group" >
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Download Stok Jakarta
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" style="background:#f1f1f1;">
+                            <li><a href="#">BEIJING BRAVO M/T 100cc</a></li>
+                            <li><a href="#">BEIJING TROOPER M/T 200cc</a></li>
+                            <li><a href="#">BEIJING MAXI M/T 125cc</a></li>
+                            <li><a href="#">BEIJING EXOTIC A/T 125cc</a></li>
+                            <li><a href="#">BEIJING SCOOTIC A/T 125cc</a></li>
+                            <li><a href="#">JRD ARJUNA-X M/T 100cc</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Download Stok Pabrik
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" style="background:#f1f1f1;">
+                            <li><a href="#">BEIJING BRAVO M/T 100cc</a></li>
+                            <li><a href="#">BEIJING TROOPER M/T 200cc</a></li>
+                            <li><a href="#">BEIJING MAXI M/T 125cc</a></li>
+                            <li><a href="#">BEIJING EXOTIC A/T 125cc</a></li>
+                            <li><a href="#">BEIJING SCOOTIC A/T 125cc</a></li>
+                            <li><a href="#">JRD ARJUNA-X M/T 100cc</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+
+
         </tr>
         </table><br/>
         <!--Html::a('Download Data Motor', ['export'], ['class' => 'btn btn-info'])-->
+
+        <?php
+        $form = \yii\bootstrap\ActiveForm::begin();
+
+        /* parameterized initialization */
+        $form = \yii\bootstrap\ActiveForm::begin([
+        'id' => 'form_id',
+        'options' => [
+        'class' => 'form_class',
+        'enctype' => 'multipart/form-data',
+        ],
+        ]);
+        //render form elements here
+        \yii\bootstrap\ActiveForm::end();
+        ?>
+
+    </div>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

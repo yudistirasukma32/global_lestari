@@ -3,16 +3,16 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\Pembeli;
-use app\models\PembeliSearch;
+use app\models\Logs;
+use app\models\LogsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * PembeliController implements the CRUD actions for Pembeli model.
+ * LogsController implements the CRUD actions for Logs model.
  */
-class PembeliController extends Controller
+class LogsController extends Controller
 {
     public function behaviors()
     {
@@ -27,14 +27,13 @@ class PembeliController extends Controller
     }
 
     /**
-     * Lists all Pembeli models.
+     * Lists all Logs models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new PembeliSearch();
+        $searchModel = new LogsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $dataProvider->pagination->pageSize=10;
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -43,7 +42,7 @@ class PembeliController extends Controller
     }
 
     /**
-     * Displays a single Pembeli model.
+     * Displays a single Logs model.
      * @param integer $id
      * @return mixed
      */
@@ -55,35 +54,25 @@ class PembeliController extends Controller
     }
 
     /**
-     * Creates a new Pembeli model.
+     * Creates a new Logs model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Pembeli();
+        $model = new Logs();
 
-        $user = Yii::$app->user->identity->username;
-
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
-
-                $id_pembeli = $model->nama;
-
-                Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data pembeli dengan nama : '.$id_pembeli.' // oleh user : '.$user.'")')
-                    ->execute();
-
-                return $this->redirect(['view', 'id' => $model->id]);
-            } else {
-                return $this->render('create', [
-                    'model' => $model,
-                ]);
-            }
-
-
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        } else {
+            return $this->render('create', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**
-     * Updates an existing Pembeli model.
+     * Updates an existing Logs model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -102,34 +91,28 @@ class PembeliController extends Controller
     }
 
     /**
-     * Deletes an existing Pembeli model.
+     * Deletes an existing Logs model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
      */
     public function actionDelete($id)
     {
-        $model = $this->findModel($id);
-        $nama = $model->nama;
-        $user = Yii::$app->user->identity->username;
-
         $this->findModel($id)->delete();
-        Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Delete data pembeli dengan id : '.$id.' // atas nama pembeli '.$nama.' // oleh user : '.$user.'")')
-            ->execute();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the Pembeli model based on its primary key value.
+     * Finds the Logs model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Pembeli the loaded model
+     * @return Logs the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Pembeli::findOne($id)) !== null) {
+        if (($model = Logs::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

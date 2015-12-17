@@ -12,6 +12,7 @@ use Yii;
  * @property string $posisi
  * @property string $keterangan
  */
+
 class PosisiMotor extends \yii\db\ActiveRecord
 {
     /**
@@ -24,12 +25,12 @@ class PosisiMotor extends \yii\db\ActiveRecord
 
     public function getMotor0()
     {
-        return $this->hasOne(Motor::className(), ['id' => 'id_motor']);
+        return $this->hasOne(Motor::className(), ['id' => 'id_motor'])->from(Motor::tableName());
     }
 
     public function getJenisMotor0()
     {
-        return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis'])->with(['motor']);
+        return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis'])->with(['motor'])->from(JenisMotor::tableName());
     }
     /**
      * @inheritdoc

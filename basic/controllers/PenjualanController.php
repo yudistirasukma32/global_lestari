@@ -68,11 +68,18 @@ class PenjualanController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             //var_dump($model);
+
+            $id_pembeli = $model->id_pembeli;
             $id_motor = $model->id_motor;
+            $id_penjualan = $this->id;
+            $user = Yii::$app->user->identity->username;
+
            //$id_motor = Yii::$app->request->post(id_motor);
             Yii::$app->db->createCommand('UPDATE motor SET status="laku" WHERE id='.$id_motor)
                 ->execute();
             Yii::$app->db->createCommand('UPDATE posisi_motor SET posisi="Lain-lain" WHERE id_motor='.$id_motor)
+                ->execute();
+            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data penjualan dengan id : '.$id_penjualan.' // oleh user : '.$user.'")')
                 ->execute();
             return $this->redirect(['view', 'id' => $model->id]);
 
@@ -112,7 +119,10 @@ class PenjualanController extends Controller
      */
     public function actionDelete($id)
     {
+        $user = Yii::$app->user->identity->username;
         $this->findModel($id)->delete();
+        Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Delete data penjualan dengan id : '.$id.' //  oleh user : '.$user.'")')
+            ->execute();
 
         return $this->redirect(['index']);
     }

@@ -19,12 +19,13 @@ class PosisiMotorSearch extends PosisiMotor
     public $no_totok;
     public $no_rangka;
     public $no_mesin;
+    public $nama;
 
     public function rules()
     {
         return [
             [['id', 'id_motor'], 'integer'],
-            [['posisi', 'keterangan','no_totok','no_rangka','no_mesin'], 'safe'],
+            [['posisi', 'keterangan','no_totok','no_rangka','no_mesin','nama'], 'safe'],
         ];
     }
 
@@ -49,6 +50,29 @@ class PosisiMotorSearch extends PosisiMotor
         $query = PosisiMotor::find();
         $query->joinWith(['motor0']);
         $query->where('status="belum terjual"');
+        /*$query = PosisiMotor::find()->joinWith(['motor0','jenisMotor0'])->where('status="belum terjual"');
+
+        $query = PosisiMotor::find()
+            ->joinWith(['motor0', 'jenisMotor0'])
+            ->select([
+                'posisi_motor.id',
+                'posisi_motor.posisi',
+                'posisi_motor.id_motor',
+                'posisi_motor.keterangan',
+                'motor.id_jenis',
+                'motor.no_mesin',
+                'motor.no_rangka',
+                'motor.no_totok',
+                'motor.status',
+                'jenis_motor.nama'])
+            ->all();
+
+        /*$query =    'SELECT a.id, a.posisi, a.id_motor, a.keterangan, b.id_jenis, b.no_totok, b.no_rangka, b.no_mesin, c.nama
+                    FROM posisi_motor a INNER JOIN motor b
+                    ON a.id_motor = b.id
+                    INNER JOIN jenis_motor c
+                    ON b.id_jenis = c.id
+                    WHERE b.status != "laku"'; */
 
         // add conditions that should always apply here
 
@@ -91,6 +115,7 @@ class PosisiMotorSearch extends PosisiMotor
             'no_totok'=> $this->no_totok,
             'no_rangka'=> $this->no_rangka,
             'no_mesin'=> $this->no_mesin,
+            //'nama'=> $this->nama,
         ]);
 
         $query->andFilterWhere(['like', 'posisi', $this->posisi])

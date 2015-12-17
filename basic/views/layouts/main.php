@@ -39,7 +39,6 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Home', 'url' => ['/site/index']],
-            //['label' => 'Jenis Motor', 'url' => ['/jenis-motor/index']],
 			//['label' => 'Jenis Motor', 'url' => ['/motor/index']],
             ['label' => 'Motor', 'visible' => !Yii::$app->user->isGuest,
 			 'items' => [
@@ -69,13 +68,14 @@ AppAsset::register($this);
                  '<li class="divider"></li>',
                  ['label' => 'Hak Akses Staf', 'url' => '#'],
 				 ],
-			],
-			['label' => 'User', 'visible' => !Yii::$app->user->isGuest,
+			],*/
+            ['label' => 'Logs', 'url' => ['/logs/index']],
+			/*['label' => 'User', 'visible' => !Yii::$app->user->isGuest,
 			 'items' => [
-                 ['label' => 'User', 'url' =>'#'],
-                 '<li class="divider"></li>',
-                 ['label' => 'Profil', 'url' => '#'],
-				 ['label' => 'Logs', 'url' => '#'],
+                 //['label' => 'User', 'url' =>'#'],
+                 //'<li class="divider"></li>',
+                 //['label' => 'Profil', 'url' => '#'],
+				 ['label' => 'Logs', 'url' => '../logs/index'],
 				 ],
 			],*/
 			
