@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8e69c274-ca8f-4e61-ab6d-c6c39f82b00f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/controllers/MotorController.php" afterPath="$PROJECT_DIR$/basic/controllers/MotorController.php" />
     </list>
     <ignored path="global_lestari.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,50 +32,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/views/posisi-motor/index.php">
+        <entry file="file://$PROJECT_DIR$/basic/views/motor/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-              <folding />
+            <state vertical-scroll-proportion="25.076923">
+              <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+              <folding>
+                <element signature="e#7#28#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#ul#0;n#div#2;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PembeliController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/controllers/PembeliController.php">
+      <file leaf-file-name="PosisiMotor.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basic/models/PosisiMotor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Pembeli.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/models/Pembeli.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/views/kondisi-motor/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="41" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MotorSearch.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/models/MotorSearch.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.846154">
-              <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.75495493">
+              <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -85,91 +59,159 @@
       <file leaf-file-name="PosisiMotorSearch.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/models/PosisiMotorSearch.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+            <state vertical-scroll-proportion="-36.615383">
+              <caret line="100" column="10" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
+              <folding>
+                <marker date="1450337718995" expanded="true" signature="1729:2064" placeholder="SELECT a.id,..posisi_motor..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KondisiMotor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/models/KondisiMotor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="9.807693">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MotorController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KondisiMotorSearch.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/models/KondisiMotorSearch.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.384615">
+              <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="76" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Motor.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/models/Motor.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.384615">
+              <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_search.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/views/motor/_search.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.346153">
+              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+              <folding>
+                <element signature="e#7#28#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/views/motor/_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.9230769">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="16" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MotorController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/basic/controllers/MotorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.4900901">
-              <caret line="259" column="47" selection-start-line="259" selection-start-column="47" selection-end-line="259" selection-end-column="47" />
+            <state vertical-scroll-proportion="2.8461537">
+              <caret line="532" column="73" selection-start-line="532" selection-start-column="73" selection-end-line="532" selection-end-column="73" />
               <folding>
-                <element signature="e#1163#1303#0#PHP" expanded="false" />
-                <element signature="e#2337#2686#0#PHP" expanded="false" />
-                <element signature="e#3103#4419#0#PHP" expanded="false" />
-                <element signature="e#8648#10514#0#PHP" expanded="false" />
-                <marker date="1450063491719" expanded="true" signature="3405:3489" placeholder="..." />
-                <marker date="1450063491719" expanded="false" signature="3425:3444" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="3553:3866" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="3570:3849" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="3942:4361" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="4513:5058" placeholder="SELECT a.id,..motor..." />
-                <marker date="1450063491719" expanded="true" signature="5388:5500" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="5408:5427" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="5588:5946" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="5605:5929" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="6020:6046" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="6020:6488" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="6638:7182" placeholder="SELECT a.id,..motor..." />
-                <marker date="1450063491719" expanded="true" signature="7510:7621" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="7530:7549" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="7685:8043" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="7702:8026" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="8117:8143" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="8117:8585" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="8734:9147" placeholder="SELECT a.id,..motor..." />
-                <marker date="1450063491719" expanded="true" signature="9474:9577" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="9494:9513" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="9641:9962" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="9658:9945" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="10036:10457" placeholder="..." />
-                <marker date="1450063491719" expanded="true" signature="10172:10457" placeholder="..." />
+                <element signature="e#1194#1334#0#PHP" expanded="false" />
+                <element signature="e#2368#2717#0#PHP" expanded="false" />
+                <element signature="e#3133#4449#0#PHP" expanded="false" />
+                <element signature="e#4455#6562#0#PHP" expanded="false" />
+                <element signature="e#6568#8614#0#PHP" expanded="false" />
+                <element signature="e#8620#10674#0#PHP" expanded="false" />
+                <element signature="e#10680#12722#0#PHP" expanded="false" />
+                <element signature="e#12728#14778#0#PHP" expanded="false" />
+                <element signature="e#14784#16838#0#PHP" expanded="false" />
+                <element signature="e#18909#21006#0#PHP" expanded="false" />
+                <element signature="e#21012#23091#0#PHP" expanded="false" />
+                <marker date="1450326068730" expanded="true" signature="3435:3519" placeholder="..." />
+                <marker date="1450326068730" expanded="false" signature="3455:3474" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="3583:3896" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="3600:3879" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="3972:4391" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="4543:5094" placeholder="SELECT a.id,..motor..." />
+                <marker date="1450326068730" expanded="true" signature="5461:5573" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="5481:5500" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="5601:5614" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="5686:6012" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="5703:5995" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="6086:6112" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="6086:6505" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="6661:7254" placeholder="SELECT d.nam..motor..." />
+                <marker date="1450326068730" expanded="true" signature="7590:7707" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="7610:7629" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="7820:8110" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="7837:8093" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="8184:8557" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="8715:9310" placeholder="SELECT d.nam..motor..." />
+                <marker date="1450326068730" expanded="true" signature="9648:9767" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="9668:9687" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="9880:10170" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="9897:10153" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="10244:10617" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="10772:11364" placeholder="SELECT d.nam..motor..." />
+                <marker date="1450326068730" expanded="true" signature="11699:11815" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="11719:11738" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="11928:12218" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="11945:12201" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="12292:12665" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="12822:13416" placeholder="SELECT d.nam..motor..." />
+                <marker date="1450326068730" expanded="true" signature="13753:13871" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="13773:13792" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="13984:14274" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="14001:14257" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="14348:14721" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="14879:15474" placeholder="SELECT d.nam..motor..." />
+                <marker date="1450326068730" expanded="true" signature="15812:15931" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="15832:15851" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="16044:16334" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="16061:16317" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="16408:16781" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="16938:17532" placeholder="SELECT d.nam..motor..." />
+                <marker date="1450326068730" expanded="true" signature="17873:17995" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="17893:17912" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="18108:18398" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="18125:18381" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="18472:18845" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="18996:19546" placeholder="SELECT a.id,..motor..." />
+                <marker date="1450326068730" expanded="true" signature="19874:19985" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="19894:19913" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="20049:20407" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="20066:20390" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="20481:20507" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="20481:20949" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="21098:21640" placeholder="SELECT a.id,..motor..." />
+                <marker date="1450326068730" expanded="true" signature="21967:22070" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="21987:22006" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="22134:22148" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="22134:22492" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="22151:22475" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="22566:22592" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="22566:23034" placeholder="..." />
+                <marker date="1450326068730" expanded="true" signature="23007:23034" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PenjualanController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/controllers/PenjualanController.php">
+      <file leaf-file-name="update.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/views/motor/update.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="199" column="65" selection-start-line="199" selection-start-column="65" selection-end-line="199" selection-end-column="65" />
-              <folding>
-                <marker date="1449803468163" expanded="true" signature="1791:1831" placeholder="UPDATE motor..." />
-                <marker date="1449803468163" expanded="true" signature="1915:1973" placeholder="UPDATE motor..." />
-                <marker date="1449803468163" expanded="true" signature="3178:3834" placeholder="SELECT a.id,..penjualan..." />
-                <marker date="1449803468163" expanded="true" signature="4392:4486" placeholder="..." />
-                <marker date="1449803468163" expanded="true" signature="4412:4431" placeholder="..." />
-                <marker date="1449803468163" expanded="true" signature="4550:4938" placeholder="..." />
-                <marker date="1449803468163" expanded="true" signature="4567:4921" placeholder="..." />
-                <marker date="1449803468163" expanded="true" signature="5018:5571" placeholder="..." />
-                <marker date="1449803468163" expanded="true" signature="5507:5524" placeholder="..." />
-                <marker date="1449803468163" expanded="true" signature="5619:5752" placeholder="..." />
-                <marker date="1449803468163" expanded="true" signature="5699:5716" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/views/penjualan/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/views/motor/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -183,7 +225,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/basic/models/DataFisikSearch.php" />
         <option value="$PROJECT_DIR$/basic/config/web.php" />
         <option value="$PROJECT_DIR$/basic/controllers/SiteController.php" />
         <option value="$PROJECT_DIR$/basic/views/kondisi-motor/update.php" />
@@ -195,10 +236,8 @@
         <option value="$PROJECT_DIR$/basic/models/Penjualan.php" />
         <option value="$PROJECT_DIR$/basic/views/penjualan/_search.php" />
         <option value="$PROJECT_DIR$/basic/models/PenjualanSearch.php" />
-        <option value="$PROJECT_DIR$/basic/models/PosisiMotor.php" />
         <option value="$PROJECT_DIR$/basic/models/KondisiMotor.php" />
         <option value="$PROJECT_DIR$/basic/models/KondisiMotorSearch.php" />
-        <option value="$PROJECT_DIR$/basic/models/PosisiMotorSearch.php" />
         <option value="$PROJECT_DIR$/basic/views/site/login.php" />
         <option value="$PROJECT_DIR$/basic/views/site/index.php" />
         <option value="$PROJECT_DIR$/basic/views/faktur/_form.php" />
@@ -206,9 +245,7 @@
         <option value="$PROJECT_DIR$/basic/views/kondisi-motor/_form.php" />
         <option value="$PROJECT_DIR$/basic/views/posisi-motor/_form.php" />
         <option value="$PROJECT_DIR$/basic/views/faktur/view.php" />
-        <option value="$PROJECT_DIR$/basic/views/motor/view.php" />
         <option value="$PROJECT_DIR$/basic/views/layouts/alert.php" />
-        <option value="$PROJECT_DIR$/basic/controllers/PembeliController.php" />
         <option value="$PROJECT_DIR$/basic/controllers/PosisiMotorController.php" />
         <option value="$PROJECT_DIR$/basic/controllers/SuratJalanController.php" />
         <option value="$PROJECT_DIR$/basic/controllers/KondisiMotorController.php" />
@@ -223,17 +260,22 @@
         <option value="$PROJECT_DIR$/basic/controllers/DataFisikController.php" />
         <option value="$PROJECT_DIR$/basic/views/faktur/index.php" />
         <option value="$PROJECT_DIR$/basic/config/params.php" />
-        <option value="$PROJECT_DIR$/basic/views/layouts/main.php" />
         <option value="$PROJECT_DIR$/basic/models/Motor.php" />
         <option value="$PROJECT_DIR$/basic/views/motor/_search.php" />
-        <option value="$PROJECT_DIR$/basic/controllers/PenjualanController.php" />
         <option value="$PROJECT_DIR$/basic/views/penjualan/index.php" />
         <option value="$PROJECT_DIR$/basic/views/kondisi-motor/index.php" />
         <option value="$PROJECT_DIR$/basic/views/posisi-motor/index.php" />
         <option value="$PROJECT_DIR$/basic/models/Pembeli.php" />
-        <option value="$PROJECT_DIR$/basic/views/motor/index.php" />
         <option value="$PROJECT_DIR$/basic/models/MotorSearch.php" />
+        <option value="$PROJECT_DIR$/basic/views/logs/index.php" />
+        <option value="$PROJECT_DIR$/basic/views/layouts/main.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/PembeliController.php" />
+        <option value="$PROJECT_DIR$/basic/controllers/PenjualanController.php" />
+        <option value="$PROJECT_DIR$/basic/views/motor/view.php" />
         <option value="$PROJECT_DIR$/basic/controllers/MotorController.php" />
+        <option value="$PROJECT_DIR$/basic/views/motor/index.php" />
+        <option value="$PROJECT_DIR$/basic/models/PosisiMotor.php" />
+        <option value="$PROJECT_DIR$/basic/models/PosisiMotorSearch.php" />
       </list>
     </option>
   </component>
@@ -277,6 +319,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -341,14 +385,74 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="posisi-motor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_lestari" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_lestari" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="motor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_lestari" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_lestari" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_lestari" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_lestari" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,7 +506,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20278184" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -452,78 +556,16 @@
           <line>2</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/basic/controllers/MotorController.php</url>
-          <line>65</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_4.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.423077">
-          <caret line="188" column="9" selection-start-line="188" selection-start-column="9" selection-end-line="188" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/JenisMotor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/penjualan/_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.6538463">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/penjualan/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/KondisiMotor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.461538">
-          <caret line="59" column="48" selection-start-line="59" selection-start-column="48" selection-end-line="59" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/PenjualanSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.884615">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="73" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/web/.htaccess">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/KondisiMotorSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="76" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -563,24 +605,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/motor/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="21" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/views/kondisi-motor/_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.5">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="32" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/posisi-motor/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="31" column="107" selection-start-line="31" selection-start-column="107" selection-end-line="31" selection-end-column="107" />
         </state>
       </provider>
     </entry>
@@ -595,13 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8461537">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/motor/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.8461537">
-          <caret line="13" column="41" selection-start-line="13" selection-start-column="41" selection-end-line="13" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -733,40 +754,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/layouts/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="85" column="26" selection-start-line="84" selection-start-column="16" selection-end-line="85" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/motor/_search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/Motor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/PosisiMotor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/views/kondisi-motor/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="41" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -774,15 +765,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="43" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/controllers/PembeliController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="47" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,43 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/MotorSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.846154">
-          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/PosisiMotorSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/controllers/PenjualanController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="199" column="65" selection-start-line="199" selection-start-column="65" selection-end-line="199" selection-end-column="65" />
-          <folding>
-            <marker date="1449803468163" expanded="true" signature="1791:1831" placeholder="UPDATE motor..." />
-            <marker date="1449803468163" expanded="true" signature="1915:1973" placeholder="UPDATE motor..." />
-            <marker date="1449803468163" expanded="true" signature="3178:3834" placeholder="SELECT a.id,..penjualan..." />
-            <marker date="1449803468163" expanded="true" signature="4392:4486" placeholder="..." />
-            <marker date="1449803468163" expanded="true" signature="4412:4431" placeholder="..." />
-            <marker date="1449803468163" expanded="true" signature="4550:4938" placeholder="..." />
-            <marker date="1449803468163" expanded="true" signature="4567:4921" placeholder="..." />
-            <marker date="1449803468163" expanded="true" signature="5018:5571" placeholder="..." />
-            <marker date="1449803468163" expanded="true" signature="5507:5524" placeholder="..." />
-            <marker date="1449803468163" expanded="true" signature="5619:5752" placeholder="..." />
-            <marker date="1449803468163" expanded="true" signature="5699:5716" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -838,50 +783,280 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/views/motor/index.php">
+    <entry file="file://$PROJECT_DIR$/basic/models/MotorSearch.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="49" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+          <caret line="88" column="42" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/pembeli/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/pembeli/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/pembeli/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/logs/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/layouts/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/PembeliController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="117" selection-end-column="24" />
+          <folding>
+            <marker date="1450076024129" expanded="true" signature="1698:1819" placeholder="insert into logs..." />
+            <marker date="1450076024129" expanded="true" signature="3059:3143" placeholder="insert into logs..." />
+            <marker date="1450076024129" expanded="true" signature="3059:3166" placeholder="insert into logs..." />
+            <marker date="1450076024129" expanded="true" signature="3059:3201" placeholder="insert into logs..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/PenjualanController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="146" column="36" selection-start-line="146" selection-start-column="36" selection-end-line="146" selection-end-column="36" />
+          <folding>
+            <marker date="1450076805225" expanded="true" signature="1935:1975" placeholder="UPDATE motor..." />
+            <marker date="1450076805225" expanded="true" signature="2059:2117" placeholder="UPDATE motor..." />
+            <marker date="1450076805225" expanded="true" signature="2201:2324" placeholder="insert into logs..." />
+            <marker date="1450076805225" expanded="true" signature="3469:3583" placeholder="insert into logs..." />
+            <marker date="1450076805225" expanded="true" signature="3752:4408" placeholder="SELECT a.id,..penjualan..." />
+            <marker date="1450076805225" expanded="true" signature="4966:5060" placeholder="..." />
+            <marker date="1450076805225" expanded="true" signature="4986:5005" placeholder="..." />
+            <marker date="1450076805225" expanded="true" signature="5124:5512" placeholder="..." />
+            <marker date="1450076805225" expanded="true" signature="5141:5495" placeholder="..." />
+            <marker date="1450076805225" expanded="true" signature="5592:6145" placeholder="..." />
+            <marker date="1450076805225" expanded="true" signature="6081:6098" placeholder="..." />
+            <marker date="1450076805225" expanded="true" signature="6193:6326" placeholder="..." />
+            <marker date="1450076805225" expanded="true" signature="6273:6290" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/LogsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/posisi-motor/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.230769">
+          <caret line="41" column="226" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="226" />
+          <folding>
+            <marker date="1449718858666" expanded="true" signature="412:670" placeholder="SELECT a.id,..motor..." />
+            <marker date="1449718858666" expanded="true" signature="636:669" placeholder="SELECT id_mo..posisi_motor..." />
+            <marker date="1449718858666" expanded="true" signature="694:901" placeholder="SELECT a.id,..motor..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/motor/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.9615383">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/motor/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/motor/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9230769">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="16" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/motor/_search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.346153">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+          <folding>
+            <element signature="e#7#28#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/Motor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/controllers/MotorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4900901">
-          <caret line="259" column="47" selection-start-line="259" selection-start-column="47" selection-end-line="259" selection-end-column="47" />
+        <state vertical-scroll-proportion="2.8461537">
+          <caret line="532" column="73" selection-start-line="532" selection-start-column="73" selection-end-line="532" selection-end-column="73" />
           <folding>
-            <element signature="e#1163#1303#0#PHP" expanded="false" />
-            <element signature="e#2337#2686#0#PHP" expanded="false" />
-            <element signature="e#3103#4419#0#PHP" expanded="false" />
-            <element signature="e#8648#10514#0#PHP" expanded="false" />
-            <marker date="1450063491719" expanded="true" signature="3405:3489" placeholder="..." />
-            <marker date="1450063491719" expanded="false" signature="3425:3444" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="3553:3866" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="3570:3849" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="3942:4361" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="4513:5058" placeholder="SELECT a.id,..motor..." />
-            <marker date="1450063491719" expanded="true" signature="5388:5500" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="5408:5427" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="5588:5946" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="5605:5929" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="6020:6046" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="6020:6488" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="6638:7182" placeholder="SELECT a.id,..motor..." />
-            <marker date="1450063491719" expanded="true" signature="7510:7621" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="7530:7549" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="7685:8043" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="7702:8026" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="8117:8143" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="8117:8585" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="8734:9147" placeholder="SELECT a.id,..motor..." />
-            <marker date="1450063491719" expanded="true" signature="9474:9577" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="9494:9513" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="9641:9962" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="9658:9945" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="10036:10457" placeholder="..." />
-            <marker date="1450063491719" expanded="true" signature="10172:10457" placeholder="..." />
+            <element signature="e#1194#1334#0#PHP" expanded="false" />
+            <element signature="e#2368#2717#0#PHP" expanded="false" />
+            <element signature="e#3133#4449#0#PHP" expanded="false" />
+            <element signature="e#4455#6562#0#PHP" expanded="false" />
+            <element signature="e#6568#8614#0#PHP" expanded="false" />
+            <element signature="e#8620#10674#0#PHP" expanded="false" />
+            <element signature="e#10680#12722#0#PHP" expanded="false" />
+            <element signature="e#12728#14778#0#PHP" expanded="false" />
+            <element signature="e#14784#16838#0#PHP" expanded="false" />
+            <element signature="e#18909#21006#0#PHP" expanded="false" />
+            <element signature="e#21012#23091#0#PHP" expanded="false" />
+            <marker date="1450326068730" expanded="true" signature="3435:3519" placeholder="..." />
+            <marker date="1450326068730" expanded="false" signature="3455:3474" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="3583:3896" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="3600:3879" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="3972:4391" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="4543:5094" placeholder="SELECT a.id,..motor..." />
+            <marker date="1450326068730" expanded="true" signature="5461:5573" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="5481:5500" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="5601:5614" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="5686:6012" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="5703:5995" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="6086:6112" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="6086:6505" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="6661:7254" placeholder="SELECT d.nam..motor..." />
+            <marker date="1450326068730" expanded="true" signature="7590:7707" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="7610:7629" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="7820:8110" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="7837:8093" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="8184:8557" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="8715:9310" placeholder="SELECT d.nam..motor..." />
+            <marker date="1450326068730" expanded="true" signature="9648:9767" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="9668:9687" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="9880:10170" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="9897:10153" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="10244:10617" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="10772:11364" placeholder="SELECT d.nam..motor..." />
+            <marker date="1450326068730" expanded="true" signature="11699:11815" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="11719:11738" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="11928:12218" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="11945:12201" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="12292:12665" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="12822:13416" placeholder="SELECT d.nam..motor..." />
+            <marker date="1450326068730" expanded="true" signature="13753:13871" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="13773:13792" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="13984:14274" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="14001:14257" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="14348:14721" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="14879:15474" placeholder="SELECT d.nam..motor..." />
+            <marker date="1450326068730" expanded="true" signature="15812:15931" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="15832:15851" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="16044:16334" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="16061:16317" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="16408:16781" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="16938:17532" placeholder="SELECT d.nam..motor..." />
+            <marker date="1450326068730" expanded="true" signature="17873:17995" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="17893:17912" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="18108:18398" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="18125:18381" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="18472:18845" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="18996:19546" placeholder="SELECT a.id,..motor..." />
+            <marker date="1450326068730" expanded="true" signature="19874:19985" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="19894:19913" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="20049:20407" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="20066:20390" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="20481:20507" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="20481:20949" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="21098:21640" placeholder="SELECT a.id,..motor..." />
+            <marker date="1450326068730" expanded="true" signature="21967:22070" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="21987:22006" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="22134:22148" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="22134:22492" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="22151:22475" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="22566:22592" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="22566:23034" placeholder="..." />
+            <marker date="1450326068730" expanded="true" signature="23007:23034" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/motor/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="25.076923">
+          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+          <folding>
+            <element signature="e#7#28#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#1;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#2;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/KondisiMotor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.807693">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/KondisiMotorSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="76" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/PosisiMotorSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-36.615383">
+          <caret line="100" column="10" selection-start-line="100" selection-start-column="10" selection-end-line="100" selection-end-column="10" />
+          <folding>
+            <marker date="1450337718995" expanded="true" signature="1729:2064" placeholder="SELECT a.id,..posisi_motor..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/PosisiMotor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75495493">
+          <caret line="49" column="26" selection-start-line="49" selection-start-column="26" selection-end-line="49" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
