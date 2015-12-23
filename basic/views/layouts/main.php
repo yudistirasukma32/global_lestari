@@ -69,7 +69,7 @@ AppAsset::register($this);
                  ['label' => 'Hak Akses Staf', 'url' => '#'],
 				 ],
 			],*/
-            ['label' => 'Logs', 'url' => ['/logs/index']],
+            ['label' => 'Logs', 'url' => ['/logs/index'], 'visible' => !Yii::$app->user->isGuest,],
 			/*['label' => 'User', 'visible' => !Yii::$app->user->isGuest,
 			 'items' => [
                  //['label' => 'User', 'url' =>'#'],
