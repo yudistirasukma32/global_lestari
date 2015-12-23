@@ -1,5 +1,7 @@
 {
     "require": {
-        "dmstr/yii2-adminlte-asset": "*"
+        "dmstr/yii2-adminlte-asset": "*",
+        "2amigos/yii2-chartjs-widget": "~2.0",
+        "sjaakp/yii2-gcharts": "*"
     }
 }

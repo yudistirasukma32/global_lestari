@@ -68,9 +68,21 @@ class MotorController extends Controller
     public function actionCreate()
     {
         $model = new Motor();
+        $user = Yii::$app->user->identity->username;
+
+
         if ($model->load(Yii::$app->request->post())) {
             try{
                 if($model->save()){
+
+                    $id_motor = $model->id;
+                    $no_totok = $model->no_totok;
+                    $no_mesin = $model->no_mesin;
+                    $no_rangka= $model->no_rangka;
+
+                    Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data motor id : '.$id_motor.' - No Mesin : '.$no_mesin.' - No Rangka : '.$no_rangka.' - No Totok : '.$no_totok.'// oleh user : '.$user.'")')
+                        ->execute();
+
                     Yii::$app->getSession()->setFlash(
                         'success','Data Motor Tersimpan!'
                     );
@@ -116,107 +128,20 @@ class MotorController extends Controller
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
+        //$id = $model->id;
+        $user = Yii::$app->user->identity->username;
+
+        Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Delete data Motor id : '.$id.' // oleh user : '.$user.'")')
+            ->execute();
+
         Yii::$app->session->setFlash('success',Yii::t('app', 'Data Motor Dihapus!'));
         return $this->redirect(['index']);
     }
 
-    public function actionExport(){
-        $model = Motor::find()->All();
-        $filename = 'Data Motor_'.Date('YmdGis').'.xls';
-        header("Content-type: application/vnd.ms-excel");
-        header("Content-Disposition: attachment; filename=".$filename);
-        echo '<table border="1" width="100%">
-        <p style="text-align: center;">LAPORAN DATA MOTOR</p><br/><br/>
-        <p>';
-        echo date('d/m/Y');
-        echo'</p>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>WARNA</th>
-                <th>NO TOTOK</th>
-                <th>NO RANGKA</th>
-                <th>NO MESIN</th>
-                <th>TAHUN</th>
-                <th>STATUS</th>
-                <th>KETERANGAN</th>
-            </tr>
-        </thead>';
-        foreach($model as $data){
-            echo '
-                <tr>
-                    <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
-                    <td>'.$data['no_totok'].'</td>
-                    <td>'.$data['no_rangka'].'</td>
-                    <td>'.$data['no_mesin'].'</td>
-                    <td>'.$data['tahun'].'</td>
-                    <td>'.$data['status'].'</td>
-                    <td>'.$data['keterangan'].'</td>
-                </tr>
-            ';
-        }
-        echo '</table>';
-
-    }
-
-    public function actionSurabaya(){
-        $connection = \Yii::$app->db;
-        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
-                concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
-                INNER JOIN posisi_motor b
-                ON a.id = b.id_motor
-                INNER JOIN kondisi_motor c
-                ON a.id = c.id_motor
-                INNER JOIN jenis_motor d
-                ON a.id_jenis = d.id
-                WHERE a.status = "Belum terjual" AND
-                b.posisi = "Kantor Surabaya"
-                ORDER by d.nama,a.no_totok';
-
-        $model = $connection->createCommand($sql);
-        $sby = $model->queryAll();
-        $judul = $model->queryOne();
-
-        $filename = 'Data Stok Surabaya_'.Date('YmdGis').'.xls';
-        header("Content-type: application/vnd.ms-excel");
-        header("Content-Disposition: attachment; filename=".$filename);
-        echo '<table border="1" width="100%">
-        <p style="text-align: center;">LAPORAN DATA STOK MOTOR <br/> KANTOR SURABAYA </p><br/><br/>
-        <p>';
-        echo '</p><p>';
-
-        echo '</p><p>';
-        echo date('d/m/Y');
-        echo'</p>
-        <thead>
-            <tr>
-                <th>JENIS MOTOR</th>
-                <th>ID MOTOR</th>
-                <th>WARNA</th>
-                <th>NO TOTOK</th>
-                <th>NO RANGKA</th>
-                <th>NO MESIN</th>
-                <th>KONDISI</th>
-                <th>KETERANGAN</th>
-            </tr>
-        </thead>';
-        foreach($sby as $data){
-            echo '
-                <tr>
-                    <td>'.$data['nama'].'</td>
-                    <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
-                    <td>'.$data['no_totok'].'</td>
-                    <td>'.$data['no_rangka'].'</td>
-                    <td>'.$data['no_mesin'].'</td>
-                    <td>'.$data['kondisi'].'</td>
-                    <td>'.$data['keterangan'].'</td>
-                </tr>
-            ';
-        }
-        echo '</table>';
-    }
+    /**
+     *  Print Data Stok Motor SURABAYA
+     *
+     * */
 
     public function actionSurabayaBravo(){
         $connection = \Yii::$app->db;
@@ -567,7 +492,12 @@ class MotorController extends Controller
     }
 
 
-    public function actionJakarta(){
+    /**
+     *  Print Data Stok Motor PABRIK
+     *
+     * */
+
+    public function actionPabrikBravo(){
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
@@ -578,28 +508,32 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Kantor Jakarta"
+                b.posisi = "Pabrik" AND
+                d.nama LIKE "%BRAVO%"
                 ORDER by d.nama,a.no_totok';
 
         $model = $connection->createCommand($sql);
         $sby = $model->queryAll();
-        $filename = 'Data Stok Jakarta_'.Date('YmdGis').'.xls';
+
+        $filename = 'Data Stok Bravo_Surabaya_'.Date('YmdGis').'.xls';
         header("Content-type: application/vnd.ms-excel");
         header("Content-Disposition: attachment; filename=".$filename);
         echo '<table border="1" width="100%">
-        <p style="text-align: center;">LAPORAN DATA STOK MOTOR <br/> KANTOR JAKARTA </p><br/><br/>
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR BRAVO<br/> PABRIK </p><br/><br/>
         <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
         echo date('d/m/Y');
         echo'</p>
         <thead>
             <tr>
-                <th>JENIS MOTOR</th>
+
                 <th>ID MOTOR</th>
                 <th>WARNA</th>
                 <th>NO TOTOK</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
-                <th>POSISI</th>
                 <th>KONDISI</th>
                 <th>KETERANGAN</th>
             </tr>
@@ -607,13 +541,12 @@ class MotorController extends Controller
         foreach($sby as $data){
             echo '
                 <tr>
-                    <td>'.$data['nama'].'</td>
+
                     <td>'.$data['id'].'</td>
                     <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
-                    <td>'.$data['posisi'].'</td>
                     <td>'.$data['kondisi'].'</td>
                     <td>'.$data['keterangan'].'</td>
                 </tr>
@@ -622,7 +555,7 @@ class MotorController extends Controller
         echo '</table>';
     }
 
-    public function actionPabrik(){
+    public function actionPabrikTrooper(){
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
@@ -633,28 +566,32 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Pabrik"
+                b.posisi = "Pabrik" AND
+                d.nama LIKE "%TROOPER%"
                 ORDER by d.nama,a.no_totok';
 
         $model = $connection->createCommand($sql);
         $sby = $model->queryAll();
-        $filename = 'Data Stok Pabrik_'.Date('YmdGis').'.xls';
+
+        $filename = 'Data Stok Trooper_Pabrik_'.Date('YmdGis').'.xls';
         header("Content-type: application/vnd.ms-excel");
         header("Content-Disposition: attachment; filename=".$filename);
         echo '<table border="1" width="100%">
-        <p style="text-align: center;">LAPORAN DATA STOK MOTOR <br/> PABRIK </p><br/><br/>
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR TROOPER<br/> PABRIK </p><br/><br/>
         <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
         echo date('d/m/Y');
         echo'</p>
         <thead>
             <tr>
-                <th>JENIS MOTOR</th>
+
                 <th>ID MOTOR</th>
                 <th>WARNA</th>
                 <th>NO TOTOK</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
-                <th>POSISI</th>
                 <th>KONDISI</th>
                 <th>KETERANGAN</th>
             </tr>
@@ -662,13 +599,12 @@ class MotorController extends Controller
         foreach($sby as $data){
             echo '
                 <tr>
-                    <td>'.$data['nama'].'</td>
+
                     <td>'.$data['id'].'</td>
                     <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
-                    <td>'.$data['posisi'].'</td>
                     <td>'.$data['kondisi'].'</td>
                     <td>'.$data['keterangan'].'</td>
                 </tr>
@@ -676,6 +612,186 @@ class MotorController extends Controller
         }
         echo '</table>';
     }
+
+    public function actionPabrikMaxi(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+                concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
+                INNER JOIN posisi_motor b
+                ON a.id = b.id_motor
+                INNER JOIN kondisi_motor c
+                ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
+                WHERE a.status = "Belum terjual" AND
+                b.posisi = "Pabrik" AND
+                d.nama LIKE "%MAXI%"
+                ORDER by d.nama,a.no_totok';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Maxi_Pabrik_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR MAXI<br/> PABRIK </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>ID MOTOR</th>
+                <th>WARNA</th>
+                <th>NO TOTOK</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['id'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+    }
+
+    public function actionPabrikExotic(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+                concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
+                INNER JOIN posisi_motor b
+                ON a.id = b.id_motor
+                INNER JOIN kondisi_motor c
+                ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
+                WHERE a.status = "Belum terjual" AND
+                b.posisi = "Pabrik" AND
+                d.nama LIKE "%EXOTIC%"
+                ORDER by d.nama,a.no_totok';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Exotic_Pabrik_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR EXOTIC<br/> PABRIK </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>ID MOTOR</th>
+                <th>WARNA</th>
+                <th>NO TOTOK</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['id'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+    }
+
+    public function actionPabrikScootic(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+                concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
+                INNER JOIN posisi_motor b
+                ON a.id = b.id_motor
+                INNER JOIN kondisi_motor c
+                ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
+                WHERE a.status = "Belum terjual" AND
+                b.posisi = "Pabrik" AND
+                d.nama LIKE "%SCOOTIC%"
+                ORDER by d.nama,a.no_totok';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Scootic_Pabrik_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR SCOOTIC<br/> PABRIK </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>ID MOTOR</th>
+                <th>WARNA</th>
+                <th>NO TOTOK</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['id'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+    }
+
+    /**
+     *  Print Data Stok Motor Jakarta
+     *
+     * */
+
 
     /**
      * Finds the Motor model based on its primary key value.

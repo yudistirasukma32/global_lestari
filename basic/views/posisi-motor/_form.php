@@ -19,9 +19,9 @@ $listData=\yii\helpers\ArrayHelper::map($motor,'id','no_rangka','no_mesin');
 <?php
 
 if($model->isNewRecord) {
-    $sql = 'SELECT a.id, concat(a.id, " - ", " TIPE : ", b.nama, " - ",  a.warna, " - ", a.no_rangka, " - ", a.no_mesin) as warna from motor a INNER JOIN jenis_motor b ON a.id_jenis=b.id where a.status = "belum terjual" AND a.id not in(SELECT id_motor from posisi_motor)';
+    $sql = 'SELECT a.id, concat(a.id, " - ", " TIPE : ", b.nama, " - ",  a.warna, " - ", a.no_rangka, " - ", a.no_mesin) as warna from motor a INNER JOIN jenis_motor b ON a.id_jenis=b.id where a.status = "belum terjual" AND a.id not in(SELECT id_motor from posisi_motor) ORDER BY a.id';
 } else {
-    $sql = 'SELECT a.id, concat(a.id, " - ", " TIPE : ", b.nama, " - ",  a.warna, " - ", a.no_rangka, " - ", a.no_mesin) as warna from motor a INNER JOIN jenis_motor b ON a.id_jenis=b.id where a.status = "belum terjual"';
+    $sql = 'SELECT a.id, concat(a.id, " - ", " TIPE : ", b.nama, " - ",  a.warna, " - ", a.no_rangka, " - ", a.no_mesin) as warna from motor a INNER JOIN jenis_motor b ON a.id_jenis=b.id where a.status = "belum terjual" ORDER BY a.id';
 }
 $motor = \app\models\Motor::findBySql($sql)->all();
 $listData=\yii\helpers\ArrayHelper::map($motor,'id','warna');

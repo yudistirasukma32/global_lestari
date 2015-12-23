@@ -46,12 +46,12 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" style="background:#f1f1f1;">
-                            <li><a href="surabayab-ravo">BEIJING BRAVO M/T 100cc</a></li>
+                            <li><a href="surabaya-bravo">BEIJING BRAVO M/T 100cc</a></li>
                             <li><a href="surabaya-trooper">BEIJING TROOPER M/T 200cc</a></li>
                             <li><a href="surabaya-maxi">BEIJING MAXI M/T 125cc</a></li>
                             <li><a href="surabaya-exotic">BEIJING EXOTIC A/T 125cc</a></li>
                             <li><a href="surabaya-scootic">BEIJING SCOOTIC A/T 125cc</a></li>
-                            <li><a href="surabaya-arjuna">JRD ARJUNA-X M/T 100cc</a></li>
+                            <li><a href="#">JRD ARJUNA-X M/T 100cc</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group" >
@@ -74,11 +74,11 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" style="background:#f1f1f1;">
-                            <li><a href="#">BEIJING BRAVO M/T 100cc</a></li>
-                            <li><a href="#">BEIJING TROOPER M/T 200cc</a></li>
-                            <li><a href="#">BEIJING MAXI M/T 125cc</a></li>
-                            <li><a href="#">BEIJING EXOTIC A/T 125cc</a></li>
-                            <li><a href="#">BEIJING SCOOTIC A/T 125cc</a></li>
+                            <li><a href="pabrik-bravo">BEIJING BRAVO M/T 100cc</a></li>
+                            <li><a href="pabrik-trooper">BEIJING TROOPER M/T 200cc</a></li>
+                            <li><a href="pabrik-maxi">BEIJING MAXI M/T 125cc</a></li>
+                            <li><a href="pabrik-exotic">BEIJING EXOTIC A/T 125cc</a></li>
+                            <li><a href="pabrik-scootic">BEIJING SCOOTIC A/T 125cc</a></li>
                             <li><a href="#">JRD ARJUNA-X M/T 100cc</a></li>
                         </ul>
                     </div>
