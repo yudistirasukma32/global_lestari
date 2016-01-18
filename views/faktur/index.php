@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\FakturSearch */
@@ -27,24 +26,24 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             //'id',
+            //'id_penjualan',
             'no_faktur',
-            'id_surat_jalan',
-            [
-                'attribute'=>'tgl',
-                'value'=>'tgl',
-                'format'=>'raw',
-                'contentOptions'=>['style'=>'width: 150px;'],
-                'filter'=>DatePicker::widget([
-                    'model'=>$searchModel,
-                    'attribute'=>'tgl',
-                    'clientOptions'=>[
-                        'autoclose'=>true,
-                        'format'=>'yyyy-mm-dd',
-                    ],
-                ]),
-            ],
             'nama_penerima',
+            'tgl',
+            [
+                'attribute' => 'Jenis Motor',
+                'value' => 'penjualan0.motor0.jenisMotor0.nama',
+            ],
+            [
+                'attribute' => 'Nama Pembeli',
+                'value' => 'penjualan0.pembeli0.nama',
+            ],
+            [
+                'attribute' => 'Tgl Penjualan',
+                'value' => 'penjualan0.tgl',
+            ],
             'keterangan:ntext',
+            //'foto',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

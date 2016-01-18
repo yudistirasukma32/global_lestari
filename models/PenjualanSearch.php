@@ -44,14 +44,6 @@ class PenjualanSearch extends Penjualan
      */
     public function search($params)
     {
-//        $sql = 'SELECT a.id, a.id_motor, a.tgl, a.tipe_pembayaran, a.harga, a.keterangan, b.nama, d.nama as jenis_motor FROM penjualan a
-//                LEFT JOIN pembeli b
-//                ON a.id_pembeli=b.id
-//                LEFT JOIN motor c
-//                ON a.id_motor=c.id
-//                LEFT JOIN jenis_motor d
-//                ON c.id_jenis=d.id';
-//        $query = Penjualan::findBySql($sql);
 
         $query = Penjualan::find();
         $query->joinWith(['pembeli0']);

@@ -37,6 +37,18 @@ $this->params['breadcrumbs'][] = $this->title;
             'tipe_pembayaran',
             'harga',
             'keterangan:ntext',
+            [
+                'label'=>'Foto Nota',
+                'format'=>'raw',
+                'value'=>Html::img(Yii::$app->request->baseUrl.'/uploads/nota/'.$model->foto_nota,
+                    ['width'=>'320px']),
+            ],
+            [
+                'label'=>'Foto KTP',
+                'format'=>'raw',
+                'value'=>Html::img(Yii::$app->request->baseUrl.'/uploads/ktp/'.$model->foto_ktp,
+                    ['width'=>'320px']),
+            ],
         ],
     ]) ?>
 

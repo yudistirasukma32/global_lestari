@@ -5,9 +5,11 @@ namespace app\controllers;
 use Yii;
 use app\models\Faktur;
 use app\models\FakturSearch;
+use yii\base\Exception;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * FakturController implements the CRUD actions for Faktur model.
@@ -20,7 +22,7 @@ class FakturController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['post'],
                 ],
             ],
         ];
@@ -34,7 +36,6 @@ class FakturController extends Controller
     {
         $searchModel = new FakturSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $dataProvider->pagination->pageSize=10;
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -59,12 +60,42 @@ class FakturController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
+//    public function actionCreate()
+//    {
+//        $model = new Faktur();
+//
+//        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+//            //$model->foto = UploadedFile::getInstance($model, 'foto');
+//            return $this->redirect(['view', 'id' => $model->id]);
+//        } else {
+//            return $this->render('create', [
+//                'model' => $model,
+//            ]);
+//        }
+//    }
     public function actionCreate()
     {
         $model = new Faktur();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            try{
+                $picture = UploadedFile::getInstance($model, 'foto');
+                $model->foto = $_POST['Faktur']['nama_penerima'].'-'.$_POST['Faktur']['tgl'].'.'.$picture->extension;
+
+                if($model->save()){
+                    $picture->saveAs('uploads/' . $model->nama_penerima.'-'.$model->tgl.'.'.$picture->extension);
+                    Yii::$app->getSession()->setFlash('success','Data saved!');
+                    return $this->redirect(['view','id'=>$model->id]);
+                }else{
+                    Yii::$app->getSession()->setFlash('error','Data not saved!');
+                    //var_dump($_POST);
+                    return $this->render('create', [
+                        'model' => $model,
+                    ]);
+                }
+            }catch(Exception $e){
+                Yii::$app->getSession()->setFlash('error',"{$e->getMessage()}");
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,

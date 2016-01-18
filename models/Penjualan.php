@@ -14,6 +14,12 @@ use Yii;
  * @property string $tipe_pembayaran
  * @property integer $harga
  * @property string $keterangan
+ * @property string $foto_nota
+ * @property string $foto_ktp
+ *
+ * @property Faktur[] $fakturs
+ * @property Motor $idMotor
+ * @property Pembeli $idPembeli
  */
 class Penjualan extends \yii\db\ActiveRecord
 {
@@ -39,8 +45,6 @@ class Penjualan extends \yii\db\ActiveRecord
         return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis'])->with(['motor']);
     }
 
-
-
     /**
      * @inheritdoc
      */
@@ -51,8 +55,12 @@ class Penjualan extends \yii\db\ActiveRecord
             [['id_motor', 'id_pembeli', 'harga'], 'integer'],
             [['tgl'], 'safe'],
             [['tipe_pembayaran', 'keterangan'], 'string'],
+            [['foto_nota'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
+            [['foto_ktp'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
         ];
     }
+
+
 
     /**
      * @inheritdoc
@@ -60,15 +68,40 @@ class Penjualan extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'Id Penjualan',
+            'id' => 'ID',
             'id_motor' => 'Id Motor',
             'id_pembeli' => 'Id Pembeli',
             'tgl' => 'Tgl',
             'tipe_pembayaran' => 'Tipe Pembayaran',
             'harga' => 'Harga',
             'keterangan' => 'Keterangan',
-            'nama' => 'Nama Pembeli',
+            'foto_nota' => 'Foto Nota',
+            'foto_ktp' => 'Foto Ktp',
             'jenisMotor0.nama' => 'Jenis Motor',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getFakturs()
+    {
+        return $this->hasMany(Faktur::className(), ['id_penjualan' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdMotor()
+    {
+        return $this->hasOne(Motor::className(), ['id' => 'id_motor']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getIdPembeli()
+    {
+        return $this->hasOne(Pembeli::className(), ['id' => 'id_pembeli']);
     }
 }

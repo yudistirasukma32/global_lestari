@@ -2,14 +2,13 @@
 
 namespace app\controllers;
 
-use app\models\Motor;
 use Yii;
 use app\models\Penjualan;
 use app\models\PenjualanSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\db\Expression;
+use yii\web\UploadedFile;
 
 /**
  * PenjualanController implements the CRUD actions for Penjualan model.
@@ -65,26 +64,45 @@ class PenjualanController extends Controller
     {
         $model = new Penjualan();
 
+        if ($model->load(Yii::$app->request->post())) {
+            try{
+                $picture = UploadedFile::getInstance($model, 'foto_nota');
+                $model->foto_nota = $_POST['Penjualan']['tgl'].'- NOTA'.'.'.$picture->extension;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            //var_dump($model);
+                $picture2 = UploadedFile::getInstance($model, 'foto_ktp');
+                $model->foto_ktp = $_POST['Penjualan']['tgl'].'- KTP'.'.'.$picture->extension;
 
-            $id_pembeli = $model->id_pembeli;
-            $id_motor = $model->id_motor;
-            $id_penjualan = $this->id;
-            $user = Yii::$app->user->identity->username;
+                if($model->save()){
 
-           //$id_motor = Yii::$app->request->post(id_motor);
-            Yii::$app->db->createCommand('UPDATE motor SET status="laku" WHERE id='.$id_motor)
-                ->execute();
-            Yii::$app->db->createCommand('UPDATE posisi_motor SET posisi="Lain-lain" WHERE id_motor='.$id_motor)
-                ->execute();
-            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data penjualan dengan id : '.$id_penjualan.' // oleh user : '.$user.'")')
-                ->execute();
-            return $this->redirect(['view', 'id' => $model->id]);
+                    $picture->saveAs('uploads/nota/' .$model->tgl.'- NOTA'.'.'.$picture->extension);
+                    $picture2->saveAs('uploads/ktp/' .$model->tgl.'- KTP'.'.'.$picture->extension);
 
+                    Yii::$app->getSession()->setFlash('success','Data saved!');
+
+                    //$id_pembeli = $model->id_pembeli;
+                    $id_motor = $model->id_motor;
+                    $id_penjualan = $this->id;
+                    $user = Yii::$app->user->identity->username;
+
+                    Yii::$app->db->createCommand('UPDATE motor SET status="laku" WHERE id='.$id_motor)
+                        ->execute();
+                    Yii::$app->db->createCommand('UPDATE posisi_motor SET posisi="Lain-lain" WHERE id_motor='.$id_motor)
+                        ->execute();
+                    Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data penjualan dengan id : '.$id_penjualan.' // oleh user : '.$user.'")')
+                        ->execute();
+
+                    return $this->redirect(['view','id'=>$model->id]);
+                }else{
+                    Yii::$app->getSession()->setFlash('error','Data not saved!');
+                    //var_dump($_POST);
+                    return $this->render('create', [
+                        'model' => $model,
+                    ]);
+                }
+            }catch(Exception $e){
+                Yii::$app->getSession()->setFlash('error',"{$e->getMessage()}");
+            }
         } else {
-
             return $this->render('create', [
                 'model' => $model,
             ]);

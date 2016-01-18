@@ -33,7 +33,7 @@ $listData3=\yii\helpers\ArrayHelper::map($pembeli,'id','nama');
 
 <div class="penjualan-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]) ?>
 
     <?= $form->field($model, 'id_pembeli')->dropDownList(
         $listData3,
@@ -58,6 +58,10 @@ $listData3=\yii\helpers\ArrayHelper::map($pembeli,'id','nama');
     <?= $form->field($model, 'harga')->textInput() ?>
 
     <?= $form->field($model, 'keterangan')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'foto_nota')->fileInput() ?>
+
+    <?= $form->field($model, 'foto_ktp')->fileInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

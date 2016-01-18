@@ -10,9 +10,25 @@ $this->title = $model->no_faktur;
 $this->params['breadcrumbs'][] = ['label' => 'Fakturs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<?
+$sql = 'SELECT faktur.id, id_penjualan, nama_penerima, faktur.tgl as tgl_faktur, no_faktur, faktur.keterangan, foto,
+jenis_motor.nama as nama, pembeli.nama, penjualan.tgl as tgl_pembelian
+FROM faktur
+INNER JOIN penjualan
+ON faktur.id_penjualan = penjualan.id
+INNER JOIN pembeli
+ON penjualan.id_pembeli = pembeli.id
+INNER JOIN motor
+ON penjualan.id_motor = motor.id
+INNER JOIN jenis_motor
+ON motor.id_jenis = jenis_motor.id';
+
+?>
+
 <div class="faktur-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?> Atas Nama <?= Html::encode($model->nama_penerima) ?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -26,14 +42,21 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <?= DetailView::widget([
+
         'model' => $model,
         'attributes' => [
-            'id',
-            'id_surat_jalan',
+            //'id',
+            'id_penjualan',
             'nama_penerima',
             'tgl',
             'no_faktur',
             'keterangan:ntext',
+            [
+                'label'=>'Foto',
+                'format'=>'raw',
+                'value'=>Html::img(Yii::$app->request->baseUrl.'/uploads/'.$model->foto,
+                    ['width'=>'480px']),
+            ],
         ],
     ]) ?>
 

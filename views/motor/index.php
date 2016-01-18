@@ -60,11 +60,11 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
                             <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu" style="background:#f1f1f1;">
-                            <li><a href="#">BEIJING BRAVO M/T 100cc</a></li>
-                            <li><a href="#">BEIJING TROOPER M/T 200cc</a></li>
-                            <li><a href="#">BEIJING MAXI M/T 125cc</a></li>
-                            <li><a href="#">BEIJING EXOTIC A/T 125cc</a></li>
-                            <li><a href="#">BEIJING SCOOTIC A/T 125cc</a></li>
+                            <li><a href="jakarta-bravo">BEIJING BRAVO M/T 100cc</a></li>
+                            <li><a href="jakarta-trooper">BEIJING TROOPER M/T 200cc</a></li>
+                            <li><a href="jakarta-maxi">BEIJING MAXI M/T 125cc</a></li>
+                            <li><a href="jakarta-exotic">BEIJING EXOTIC A/T 125cc</a></li>
+                            <li><a href="jakarta-scootic">BEIJING SCOOTIC A/T 125cc</a></li>
                             <li><a href="#">JRD ARJUNA-X M/T 100cc</a></li>
                         </ul>
                     </div>

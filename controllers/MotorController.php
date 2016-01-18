@@ -176,8 +176,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -189,8 +189,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -234,8 +234,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -247,8 +247,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -292,8 +292,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -305,8 +305,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -350,8 +350,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -363,8 +363,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -408,8 +408,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -421,8 +421,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -466,8 +466,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -479,8 +479,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -530,8 +530,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -543,8 +543,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -588,8 +588,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -601,8 +601,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -646,8 +646,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -659,8 +659,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -704,8 +704,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -717,8 +717,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -762,8 +762,8 @@ class MotorController extends Controller
             <tr>
 
                 <th>ID MOTOR</th>
-                <th>WARNA</th>
                 <th>NO TOTOK</th>
+                <th>WARNA</th>
                 <th>NO RANGKA</th>
                 <th>NO MESIN</th>
                 <th>KONDISI</th>
@@ -775,8 +775,8 @@ class MotorController extends Controller
                 <tr>
 
                     <td>'.$data['id'].'</td>
-                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
                     <td>'.$data['no_rangka'].'</td>
                     <td>'.$data['no_mesin'].'</td>
                     <td>'.$data['kondisi'].'</td>
@@ -792,6 +792,295 @@ class MotorController extends Controller
      *
      * */
 
+    public function actionJakartaBravo(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+                concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
+                LEFT JOIN posisi_motor b
+                ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c
+                ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
+                WHERE a.status = "Belum terjual" AND
+                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                d.nama LIKE "%BRAVO%"
+                ORDER by d.nama,a.no_totok';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Bravo_Jakarta_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR BRAVO<br/> KANTOR JAKARTA </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>ID MOTOR</th>
+                <th>NO TOTOK</th>
+                <th>WARNA</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['id'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+    }
+
+    public function actionJakartaTrooper(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+                concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
+                LEFT JOIN posisi_motor b
+                ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c
+                ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
+                WHERE a.status = "Belum terjual" AND
+                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                d.nama LIKE "%TROOPER%"
+                ORDER by d.nama,a.no_totok';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Trooper_Jakarta_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR TROOPER<br/> KANTOR JAKARTA </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>ID MOTOR</th>
+                <th>NO TOTOK</th>
+                <th>WARNA</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['id'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+    }
+
+    public function actionJakartaMaxi(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+                concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
+                LEFT JOIN posisi_motor b
+                ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c
+                ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
+                WHERE a.status = "Belum terjual" AND
+                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                d.nama LIKE "%MAXI%"
+                ORDER by d.nama,a.no_totok';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Maxi_Jakarta_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR MAXI<br/> KANTOR JAKARTA </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>ID MOTOR</th>
+                <th>NO TOTOK</th>
+                <th>WARNA</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['id'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+    }
+
+    public function actionJakartaExotic(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+                concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
+                LEFT JOIN posisi_motor b
+                ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c
+                ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
+                WHERE a.status = "Belum terjual" AND
+                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                d.nama LIKE "%EXOTIC%"
+                ORDER by d.nama,a.no_totok';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Exotic_Jakarta_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR EXOTIC<br/> KANTOR JAKARTA </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>ID MOTOR</th>
+                <th>NO TOTOK</th>
+                <th>WARNA</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['id'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+    }
+
+    public function actionJakartaScootic(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
+                concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
+                LEFT JOIN posisi_motor b
+                ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c
+                ON a.id = c.id_motor
+                INNER JOIN jenis_motor d
+                ON a.id_jenis = d.id
+                WHERE a.status = "Belum terjual" AND
+                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                d.nama LIKE "%SCOOTIC%"
+                ORDER by d.nama,a.no_totok';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Scootic_Jakarta_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR SCOOTIC<br/> KANTOR JAKARTA </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>ID MOTOR</th>
+                <th>NO TOTOK</th>
+                <th>WARNA</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['id'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+    }
 
     /**
      * Finds the Motor model based on its primary key value.

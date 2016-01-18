@@ -38,11 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'jenisMotor0.nama',
                 'value' => 'motor0.jenisMotor0.nama',
             ],
-            [
-                'attribute' => 'id_motor',
-                'value' => 'id_motor',
-                'contentOptions'=>['style'=>'width: 75px;'],
-            ],
+//            [
+//                'attribute' => 'id_motor',
+//                'value' => 'id_motor',
+//                'contentOptions'=>['style'=>'width: 75px;'],
+//            ],
             [
                 'attribute' => 'nama',
                 'value' => 'pembeli0.nama',
@@ -63,8 +63,23 @@ $this->params['breadcrumbs'][] = $this->title;
                     ],
                 ]),
             ],
-            'keterangan:ntext',
-
+            //'keterangan:ntext',
+            [
+                'attribute' => 'foto_nota',
+                'format' => 'html',
+                'value' => function ($data) {
+                    return Html::img(Yii::getAlias('@web').'/uploads/nota/'. $data['foto_nota'],
+                        ['width' => '70px']);
+                },
+            ],
+            [
+                'attribute' => 'foto_ktp',
+                'format' => 'html',
+                'value' => function ($data) {
+                    return Html::img(Yii::getAlias('@web').'/uploads/ktp/'. $data['foto_ktp'],
+                        ['width' => '70px']);
+                },
+            ],
             [
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{view} {update} {delete}',
