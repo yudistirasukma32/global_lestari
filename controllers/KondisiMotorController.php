@@ -63,8 +63,15 @@ class KondisiMotorController extends Controller
     {
         $model = new KondisiMotor();
 
+        $user = Yii::$app->user->identity->username;
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            $id_motor = $_POST['KondisiMotor']['id_motor'];
+            $kondisi = $_POST['KondisiMotor']['kondisi'];
+            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data kondisi motor : ' . $id_motor . ' // dengan kondisi '. $kondisi .' // oleh user : ' . $user . '")')
+                ->execute();
+
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -82,7 +89,16 @@ class KondisiMotorController extends Controller
     {
         $model = $this->findModel($id);
 
+        $user = Yii::$app->user->identity->username;
+        $id_motor = $model->id_motor;
+        $kondisi_lama = $model->kondisi;
+
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $kondisi_baru = $_POST['KondisiMotor']['kondisi'];
+            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Update data kondisi motor : ' . $id_motor . ' // dengan kondisi lama '. $kondisi_lama .'  menjadi '. $kondisi_baru .' // oleh user : ' . $user . '")')
+                ->execute();
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -99,7 +115,13 @@ class KondisiMotorController extends Controller
      */
     public function actionDelete($id)
     {
+        $user = Yii::$app->user->identity->username;
+        $model = $this->findModel($id);
+        $kondisi = $model->kondisi;
+
         $this->findModel($id)->delete();
+        Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Delete data kondisi motor dgn id : ' . $id_motor . ' // dengan kondisi '. $kondisi .' // oleh user : ' . $user . '")')
+            ->execute();
 
         return $this->redirect(['index']);
     }

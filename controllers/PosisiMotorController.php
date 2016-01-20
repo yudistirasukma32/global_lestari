@@ -63,8 +63,18 @@ class PosisiMotorController extends Controller
     {
         $model = new PosisiMotor();
 
+        $user = Yii::$app->user->identity->username;
+
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+
+            $id_motor = $_POST['PosisiMotor']['id_motor'];
+            $posisi = $_POST['PosisiMotor']['posisi'];
+
+            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data posisi motor : ' . $id_motor . ' // di '. $posisi .' // oleh user : ' . $user . '")')
+                ->execute();
+
+            return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -82,7 +92,16 @@ class PosisiMotorController extends Controller
     {
         $model = $this->findModel($id);
 
+        $user = Yii::$app->user->identity->username;
+        $id_motor = $model->id_motor;
+        $posisi_lama = $model->posisi;
+
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $posisi_baru = $_POST['PosisiMotor']['posisi'];
+            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Update data posisi motor : ' . $id_motor . ' // dari '. $posisi_lama .' ke '. $posisi_baru .' oleh user : ' . $user . '")')
+                ->execute();
+
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
@@ -99,7 +118,14 @@ class PosisiMotorController extends Controller
      */
     public function actionDelete($id)
     {
+        $user = Yii::$app->user->identity->username;
+        $model = $this->findModel($id);
+        $posisi = $model->posisi;
+        $id_motor = $model->id_motor;
+
         $this->findModel($id)->delete();
+        Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Delete data posisi dengan id : '.$id.' // motor dgn id : '. $id_motor .' di : '. $posisi .' oleh user : '.$user.'")')
+            ->execute();
 
         return $this->redirect(['index']);
     }

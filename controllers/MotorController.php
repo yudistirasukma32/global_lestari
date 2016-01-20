@@ -433,7 +433,7 @@ class MotorController extends Controller
         echo '</table>';
     }
 
-    public function actionSurabayaArjuna(){
+    /*public function actionSurabayaArjuna(){
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
@@ -491,7 +491,7 @@ class MotorController extends Controller
         echo '</table>';
     }
 
-
+    */
     /**
      *  Print Data Stok Motor PABRIK
      *
@@ -501,21 +501,21 @@ class MotorController extends Controller
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
-                INNER JOIN posisi_motor b
+                LEFT JOIN posisi_motor b
                 ON a.id = b.id_motor
-                INNER JOIN kondisi_motor c
+                LEFT JOIN kondisi_motor c
                 ON a.id = c.id_motor
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Pabrik" AND
+                b.posisi = "Lain-lain" AND
                 d.nama LIKE "%BRAVO%"
                 ORDER by d.nama,a.no_totok';
 
         $model = $connection->createCommand($sql);
         $sby = $model->queryAll();
 
-        $filename = 'Data Stok Bravo_Surabaya_'.Date('YmdGis').'.xls';
+        $filename = 'Data Stok Bravo_Pabrik_'.Date('YmdGis').'.xls';
         header("Content-type: application/vnd.ms-excel");
         header("Content-Disposition: attachment; filename=".$filename);
         echo '<table border="1" width="100%">
@@ -559,14 +559,14 @@ class MotorController extends Controller
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
-                INNER JOIN posisi_motor b
+                LEFT JOIN posisi_motor b
                 ON a.id = b.id_motor
-                INNER JOIN kondisi_motor c
+                LEFT JOIN kondisi_motor c
                 ON a.id = c.id_motor
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Pabrik" AND
+                b.posisi = "Lain-lain" AND
                 d.nama LIKE "%TROOPER%"
                 ORDER by d.nama,a.no_totok';
 
@@ -617,14 +617,14 @@ class MotorController extends Controller
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
-                INNER JOIN posisi_motor b
+                LEFT JOIN posisi_motor b
                 ON a.id = b.id_motor
-                INNER JOIN kondisi_motor c
+                LEFT JOIN kondisi_motor c
                 ON a.id = c.id_motor
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Pabrik" AND
+                b.posisi = "Lain-lain" AND
                 d.nama LIKE "%MAXI%"
                 ORDER by d.nama,a.no_totok';
 
@@ -675,14 +675,14 @@ class MotorController extends Controller
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
-                INNER JOIN posisi_motor b
+                LEFT JOIN posisi_motor b
                 ON a.id = b.id_motor
-                INNER JOIN kondisi_motor c
+                LEFT JOIN kondisi_motor c
                 ON a.id = c.id_motor
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Pabrik" AND
+                b.posisi = "Lain-lain" AND
                 d.nama LIKE "%EXOTIC%"
                 ORDER by d.nama,a.no_totok';
 
@@ -740,7 +740,7 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Pabrik" AND
+                b.posisi = "Lain-lain" AND
                 d.nama LIKE "%SCOOTIC%"
                 ORDER by d.nama,a.no_totok';
 
@@ -803,7 +803,7 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                b.posisi = "Lain-lain" AND
                 d.nama LIKE "%BRAVO%"
                 ORDER by d.nama,a.no_totok';
 
@@ -861,7 +861,7 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                b.posisi = "Lain-lain" AND
                 d.nama LIKE "%TROOPER%"
                 ORDER by d.nama,a.no_totok';
 
@@ -919,7 +919,7 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                b.posisi = "Lain-lain"  AND
                 d.nama LIKE "%MAXI%"
                 ORDER by d.nama,a.no_totok';
 
@@ -977,7 +977,7 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                b.posisi = "Lain-lain" AND
                 d.nama LIKE "%EXOTIC%"
                 ORDER by d.nama,a.no_totok';
 
@@ -1035,7 +1035,7 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Kantor Jakarta" OR b.posisi is null AND
+                b.posisi = "Lain-lain" AND
                 d.nama LIKE "%SCOOTIC%"
                 ORDER by d.nama,a.no_totok';
 
