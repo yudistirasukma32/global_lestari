@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e69c274-ca8f-4e61-ab6d-c6c39f82b00f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/FakturController.php" afterPath="$PROJECT_DIR$/controllers/FakturController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/PenjualanController.php" afterPath="$PROJECT_DIR$/controllers/PenjualanController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/SuratJalanController.php" afterPath="$PROJECT_DIR$/controllers/SuratJalanController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Faktur.php" afterPath="$PROJECT_DIR$/models/Faktur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/FakturSearch.php" afterPath="$PROJECT_DIR$/models/FakturSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Penjualan.php" afterPath="$PROJECT_DIR$/models/Penjualan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/SuratJalan.php" afterPath="$PROJECT_DIR$/models/SuratJalan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/SuratJalanSearch.php" afterPath="$PROJECT_DIR$/models/SuratJalanSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/faktur/index.php" afterPath="$PROJECT_DIR$/views/faktur/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/faktur/view.php" afterPath="$PROJECT_DIR$/views/faktur/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/penjualan/view.php" afterPath="$PROJECT_DIR$/views/penjualan/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/index.php" afterPath="$PROJECT_DIR$/views/site/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/surat-jalan/_form.php" afterPath="$PROJECT_DIR$/views/surat-jalan/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/surat-jalan/_search.php" afterPath="$PROJECT_DIR$/views/surat-jalan/_search.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/surat-jalan/index.php" afterPath="$PROJECT_DIR$/views/surat-jalan/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/surat-jalan/view.php" afterPath="$PROJECT_DIR$/views/surat-jalan/view.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/notice.zip" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/views.zip" afterPath="$PROJECT_DIR$/views/views.zip" />
     </list>
     <ignored path="global_lestari.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FakturController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FakturController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/FakturController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5099099">
+            <state vertical-scroll-proportion="-10.884615">
               <caret line="132" column="51" selection-start-line="132" selection-start-column="51" selection-end-line="132" selection-end-column="51" />
               <folding>
                 <element signature="e#35#43#0#PHP" expanded="true" />
@@ -99,6 +84,26 @@
                 <marker date="1453870332390" expanded="true" signature="5637:5742" placeholder="insert into logs..." />
                 <marker date="1453870332390" expanded="true" signature="5637:5772" placeholder="insert into logs..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LogsController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/LogsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.423077">
+              <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Logs.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/Logs.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,16 +128,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-10.461538">
               <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Faktur.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/Faktur.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.3846154">
-              <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -165,16 +160,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-13.192307">
               <caret line="44" column="14" selection-start-line="44" selection-start-column="14" selection-end-line="44" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuratJalanSearch.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/SuratJalanSearch.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-22.653847">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -468,10 +453,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20717423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20717423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.100164205" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22620791" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -534,13 +519,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/yiisoft/yii2/web/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/logs/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -566,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/LogsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1080,7 +1051,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/FakturController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5099099">
+        <state vertical-scroll-proportion="-10.884615">
           <caret line="132" column="51" selection-start-line="132" selection-start-column="51" selection-end-line="132" selection-end-column="51" />
           <folding>
             <element signature="e#35#43#0#PHP" expanded="true" />
@@ -1091,6 +1062,22 @@
             <marker date="1453870332390" expanded="true" signature="5637:5742" placeholder="insert into logs..." />
             <marker date="1453870332390" expanded="true" signature="5637:5772" placeholder="insert into logs..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/LogsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.423077">
+          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/Logs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
