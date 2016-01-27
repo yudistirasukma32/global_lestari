@@ -55,8 +55,8 @@ class Penjualan extends \yii\db\ActiveRecord
             [['id_motor', 'id_pembeli', 'harga'], 'integer'],
             [['tgl'], 'safe'],
             [['tipe_pembayaran', 'keterangan'], 'string'],
-            [['foto_nota'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
-            [['foto_ktp'], 'file', 'skipOnEmpty' => false, 'extensions' => 'png, jpg'],
+            [['foto_nota'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
+            [['foto_ktp'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
         ];
     }
 

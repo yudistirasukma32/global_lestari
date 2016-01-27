@@ -2,7 +2,6 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use dosamigos\datepicker\DatePicker;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\SuratJalanSearch */
@@ -11,13 +10,22 @@ use dosamigos\datepicker\DatePicker;
 $this->title = 'Data Surat Jalan';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+<?php
+
+//use app\models\Country;
+$no_faktur=\app\models\Faktur::find()->all();
+$listData=\yii\helpers\ArrayHelper::map($no_faktur,'id','no_faktur');
+
+?>
+
 <div class="surat-jalan-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Buat Data Surat Jalan', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Surat Jalan', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?= GridView::widget([
@@ -27,25 +35,18 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'id_penjualan',
-            'alamat_pengiriman',
+            //'id_faktur',
             [
-                'attribute'=>'tgl_pengiriman',
-                'value'=>'tgl_pengiriman',
-                'format'=>'raw',
-                'contentOptions'=>['style'=>'width: 150px;'],
-                'filter'=>DatePicker::widget([
-                    'model'=>$searchModel,
-                    'attribute'=>'tgl_pengiriman',
-                    'clientOptions'=>[
-                        'autoclose'=>true,
-                        'format'=>'yyyy-mm-dd',
-                    ],
-                ]),
+                'attribute' => 'no_faktur',
+                'value' => 'faktur0.no_faktur',
             ],
-            'nama_penerima',
+            'alamat_pengiriman',
+            'tgl_pengiriman',
             'nama_pengirim',
-            'keterangan:ntext',
+            'nama_penerima',
+
+            // 'keterangan:ntext',
+            // 'foto',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

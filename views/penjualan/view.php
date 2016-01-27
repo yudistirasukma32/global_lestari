@@ -32,7 +32,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'id_motor',
+            'motor0.no_totok',
+            'motor0.no_mesin',
+            'motor0.no_rangka',
             'id_pembeli',
+            'pembeli0.nama',
             'tgl',
             'tipe_pembayaran',
             'harga',

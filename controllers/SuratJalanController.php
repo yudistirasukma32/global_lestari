@@ -8,6 +8,7 @@ use app\models\SuratJalanSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * SuratJalanController implements the CRUD actions for SuratJalan model.
@@ -20,7 +21,7 @@ class SuratJalanController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['post'],
                 ],
             ],
         ];
@@ -34,7 +35,6 @@ class SuratJalanController extends Controller
     {
         $searchModel = new SuratJalanSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $dataProvider->pagination->pageSize=10;
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -63,8 +63,33 @@ class SuratJalanController extends Controller
     {
         $model = new SuratJalan();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            try{
+                $picture = UploadedFile::getInstance($model, 'foto');
+                $model->foto = 'SuratJalan - ' . $_POST['SuratJalan']['nama_penerima'].' - '.$_POST['SuratJalan']['tgl_pengiriman'].'.'.$picture->extension;
+
+                if($model->save()){
+
+                    $id_sj = $model->id;
+                    $user = Yii::$app->user->identity->username;
+
+                    $picture->saveAs('uploads/suratjalan/' . 'SuratJalan - '. $model->nama_penerima.' - '.$model->tgl_pengiriman.'.'.$picture->extension);
+                    Yii::$app->getSession()->setFlash('success','Data saved!');
+
+                    Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data surat jalan dengan id : '.$id_sj.' // oleh user : '.$user.'")')
+                        ->execute();
+
+                    return $this->redirect(['view','id'=>$model->id]);
+                }else{
+                    Yii::$app->getSession()->setFlash('error','Data not saved!');
+                    //var_dump($_POST);
+                    return $this->render('create', [
+                        'model' => $model,
+                    ]);
+                }
+            }catch(Exception $e){
+                Yii::$app->getSession()->setFlash('error',"{$e->getMessage()}");
+            }
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -82,8 +107,33 @@ class SuratJalanController extends Controller
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if ($model->load(Yii::$app->request->post())) {
+            try{
+                $picture = UploadedFile::getInstance($model, 'foto');
+                $model->foto = 'SuratJalan - '. $_POST['SuratJalan']['nama_penerima'].' - '.$_POST['SuratJalan']['tgl_pengiriman'].'.'.$picture->extension;
+
+                if($model->save()){
+
+                    $id_sj = $model->id;
+                    $user = Yii::$app->user->identity->username;
+
+                    $picture->saveAs('uploads/suratjalan/'  . 'SuratJalan - '.  $model->nama_penerima.' - '.$model->tgl_pengiriman.'.'.$picture->extension);
+                    Yii::$app->getSession()->setFlash('success','Data saved!');
+
+                    Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Update data surat jalan dengan id : '.$id_sj.' // oleh user : '.$user.'")')
+                        ->execute();
+
+                    return $this->redirect(['view','id'=>$model->id]);
+                }else{
+                    Yii::$app->getSession()->setFlash('error','Data not saved!');
+                    //var_dump($_POST);
+                    return $this->render('create', [
+                        'model' => $model,
+                    ]);
+                }
+            }catch(Exception $e){
+                Yii::$app->getSession()->setFlash('error',"{$e->getMessage()}");
+            }
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -99,7 +149,11 @@ class SuratJalanController extends Controller
      */
     public function actionDelete($id)
     {
+
+        $user = Yii::$app->user->identity->username;
         $this->findModel($id)->delete();
+        Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Delete data surat jalan dengan id : '.$id.' //  oleh user : '.$user.'")')
+            ->execute();
 
         return $this->redirect(['index']);
     }

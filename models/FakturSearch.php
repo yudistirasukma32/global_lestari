@@ -15,11 +15,13 @@ class FakturSearch extends Faktur
     /**
      * @inheritdoc
      */
+    public $nama;
+
     public function rules()
     {
         return [
             [['id', 'id_penjualan'], 'integer'],
-            [['nama_penerima', 'tgl', 'no_faktur', 'keterangan', 'foto'], 'safe'],
+            [['nama_penerima', 'tgl', 'no_faktur', 'keterangan', 'foto', 'nama'], 'safe'],
         ];
     }
 
@@ -83,6 +85,7 @@ class FakturSearch extends Faktur
 
         $query->andFilterWhere(['like', 'nama_penerima', $this->nama_penerima])
             ->andFilterWhere(['like', 'no_faktur', $this->no_faktur])
+            ->andFilterWhere(['like', 'nama', $this->nama])
             ->andFilterWhere(['like', 'keterangan', $this->keterangan])
             ->andFilterWhere(['like', 'foto', $this->foto]);
 

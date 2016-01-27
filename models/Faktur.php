@@ -58,6 +58,7 @@ class Faktur extends \yii\db\ActiveRecord
             'keterangan' => 'Keterangan',
             'foto' => 'Foto',
             'penjualan0.tgl' => 'Tgl Penjualan',
+            'nama' => 'Jenis Motor'
         ];
     }
 

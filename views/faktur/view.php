@@ -54,8 +54,8 @@ ON motor.id_jenis = jenis_motor.id';
             [
                 'label'=>'Foto',
                 'format'=>'raw',
-                'value'=>Html::img(Yii::$app->request->baseUrl.'/uploads/'.$model->foto,
-                    ['width'=>'480px']),
+                'value'=>Html::img(Yii::$app->request->baseUrl.'/uploads/faktur/'.$model->foto,
+                    ['width'=>'320px']),
             ],
         ],
     ]) ?>

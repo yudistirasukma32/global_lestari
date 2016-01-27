@@ -12,7 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="surat-jalan-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1>Surat Jalan Atas Nama <?= Html::encode($model->nama_penerima) ?> - <?= Html::encode($model->alamat_pengiriman) ?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -29,12 +29,19 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'id_penjualan',
+            'id_faktur',
+            'faktur0.no_faktur',
             'alamat_pengiriman',
             'tgl_pengiriman',
             'nama_penerima',
             'nama_pengirim',
             'keterangan:ntext',
+            [
+                'label'=>'Foto',
+                'format'=>'raw',
+                'value'=>Html::img(Yii::$app->request->baseUrl.'/uploads/suratjalan/'.$model->foto,
+                    ['width'=>'320px']),
+            ],
         ],
     ]) ?>
 

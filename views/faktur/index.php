@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'Tgl Penjualan',
                 'value' => 'penjualan0.tgl',
             ],
-            'keterangan:ntext',
+            //'keterangan:ntext',
             //'foto',
 
             ['class' => 'yii\grid\ActionColumn'],

@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'id_penjualan') ?>
+    <?= $form->field($model, 'id_faktur') ?>
 
     <?= $form->field($model, 'alamat_pengiriman') ?>
 
@@ -28,6 +28,8 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'nama_pengirim') ?>
 
     <?php // echo $form->field($model, 'keterangan') ?>
+
+    <?php // echo $form->field($model, 'foto') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
