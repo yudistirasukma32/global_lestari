@@ -60,6 +60,36 @@ class MotorController extends Controller
         ]);
     }
 
+    public function actionChart()
+    {
+        $searchModel = new MotorSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize=10;
+
+        $model = new Motor();
+
+        return $this->render('chart', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+
+        ]);
+    }
+
+    public function actionChartJkt()
+    {
+        $searchModel = new MotorSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize=10;
+
+        $model = new Motor();
+
+        return $this->render('chartjkt', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+
+        ]);
+    }
+
     /**
      * Creates a new Motor model.
      * If creation is successful, the browser will be redirected to the 'view' page.

@@ -45,7 +45,7 @@ $listData=\yii\helpers\ArrayHelper::map($penjualan,'id','keterangan');
 
     <?= $form->field($model, 'nama_penerima')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'tgl')->widget(
+    <?= $form->field($model, 'tgl_faktur')->widget(
         DatePicker::className(),[
             'inline' => false,
             'clientOptions' => [

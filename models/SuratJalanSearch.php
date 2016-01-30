@@ -66,13 +66,14 @@ class SuratJalanSearch extends SuratJalan
             'id' => $this->id,
             'id_faktur' => $this->id_faktur,
             //'faktur0.no_faktur' => $this->no_faktur,
-            'tgl_pengiriman' => $this->tgl_pengiriman,
+            //'tgl_pengiriman' => $this->tgl_pengiriman,
         ]);
 
         $query->andFilterWhere(['like', 'alamat_pengiriman', $this->alamat_pengiriman])
             ->andFilterWhere(['like', 'nama_penerima', $this->nama_penerima])
             ->andFilterWhere(['like', 'nama_pengirim', $this->nama_pengirim])
             ->andFilterWhere(['like', 'keterangan', $this->keterangan])
+            ->andFilterWhere(['like', 'tgl_pengiriman', $this->tgl_pengiriman])
             ->andFilterWhere(['like', 'no_faktur', $this->no_faktur])
             ->andFilterWhere(['like', 'foto', $this->foto]);
 

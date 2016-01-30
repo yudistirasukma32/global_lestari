@@ -10,13 +10,12 @@ use Yii;
  * @property integer $id
  * @property integer $id_penjualan
  * @property string $nama_penerima
- * @property string $tgl
+ * @property string $tgl_faktur
  * @property string $no_faktur
  * @property string $keterangan
  * @property string $foto
  *
- * @property Faktur $idPenjualan
- * @property Faktur[] $fakturs
+ * @property Penjualan $idPenjualan
  * @property SuratJalan[] $suratJalans
  */
 class Faktur extends \yii\db\ActiveRecord
@@ -35,9 +34,9 @@ class Faktur extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_penjualan', 'nama_penerima', 'tgl', 'no_faktur'], 'required'],
+            [['id_penjualan', 'nama_penerima', 'tgl_faktur', 'no_faktur'], 'required'],
             [['id_penjualan'], 'integer'],
-            [['tgl'], 'safe'],
+            [['tgl_faktur'], 'safe'],
             [['keterangan'], 'string'],
             [['nama_penerima', 'no_faktur'], 'string', 'max' => 50],
             [['foto'], 'file', 'skipOnEmpty' => true, 'extensions' => 'png, jpg'],
@@ -53,12 +52,11 @@ class Faktur extends \yii\db\ActiveRecord
             'id' => 'ID',
             'id_penjualan' => 'Id Penjualan',
             'nama_penerima' => 'Nama Penerima',
-            'tgl' => 'Tgl',
+            'tgl_faktur' => 'Tgl Faktur',
             'no_faktur' => 'No Faktur',
             'keterangan' => 'Keterangan',
             'foto' => 'Foto',
-            'penjualan0.tgl' => 'Tgl Penjualan',
-            'nama' => 'Jenis Motor'
+            'nama' => 'Nama Pembeli',
         ];
     }
 
@@ -68,28 +66,6 @@ class Faktur extends \yii\db\ActiveRecord
     public function getPenjualan0()
     {
         return $this->hasOne(Penjualan::className(), ['id' => 'id_penjualan']);
-    }
-
-    public function getPembeli0()
-    {
-        return $this->hasOne(Pembeli::className(), ['id' => 'id_pembeli'])->with(['penjualan']);
-    }
-
-    public function getMotor0(){
-        return $this->hasOne(Motor::className(), ['id' => 'id_motor'])->with(['penjualan']);
-    }
-
-    public function getJenisMotor0()
-    {
-        return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis'])->with(['motor']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getFakturs()
-    {
-        return $this->hasMany(Faktur::className(), ['id_penjualan' => 'id']);
     }
 
     /**

@@ -27,7 +27,7 @@ $listData=\yii\helpers\ArrayHelper::map($no_faktur,'id','no_faktur');
     <p>
         <?= Html::a('Create Surat Jalan', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+    <div class="table-responsive">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -42,6 +42,10 @@ $listData=\yii\helpers\ArrayHelper::map($no_faktur,'id','no_faktur');
             ],
             'alamat_pengiriman',
             'tgl_pengiriman',
+//            [
+//                'attribute' => 'tgl_pengiriman',
+//                'format' => ['date', 'php:d-m-Y']
+//            ],
             'nama_pengirim',
             'nama_penerima',
 
@@ -51,5 +55,5 @@ $listData=\yii\helpers\ArrayHelper::map($no_faktur,'id','no_faktur');
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+</div>
 </div>

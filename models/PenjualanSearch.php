@@ -48,6 +48,7 @@ class PenjualanSearch extends Penjualan
         $query = Penjualan::find();
         $query->joinWith(['pembeli0']);
         $query->joinWith(['motor0']);
+        $query->join('LEFT JOIN', 'jenis_motor', 'jenis_motor.id = motor.id_jenis');
 
         // add conditions that should always apply here
         //var_dump($sql);
@@ -84,8 +85,8 @@ class PenjualanSearch extends Penjualan
         ]);
 
         $query->andFilterWhere(['like', 'tipe_pembayaran', $this->tipe_pembayaran])
-            ->andFilterWhere(['like', 'keterangan', $this->keterangan])
-            ->andFilterWhere(['like', 'nama', $this->nama]);
+            ->andFilterWhere(['like', 'keterangan', $this->keterangan]);
+            //->andFilterWhere(['like', 'nama', $this->motor0->jenisMotor0->nama]);
             //->andFilterWhere(['like', 'id_jenis', $this->jenisMotor0.nama]);
 
         return $dataProvider;

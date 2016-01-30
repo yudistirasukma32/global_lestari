@@ -43,6 +43,20 @@ class PenjualanController extends Controller
         ]);
     }
 
+    public function actionChart()
+    {
+        $searchModel = new PenjualanSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->pagination->pageSize=10;
+
+        $model = new Penjualan();
+
+        return $this->render('chart', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+
+        ]);
+    }
     /**
      * Displays a single Penjualan model.
      * @param integer $id
@@ -187,7 +201,7 @@ class PenjualanController extends Controller
         $connection = \Yii::$app->db;
         $sql = 'SELECT a.id, a.id_motor, a.id_pembeli, d.nama as jenis_motor, c.no_totok,
                 c.no_rangka, c.no_mesin, c.warna, b.nama as pembeli, DATE_FORMAT(a.tgl,"%d/%m/%Y") as tgl,
-                a.tipe_pembayaran, a.harga, f.no_faktur
+                a.tipe_pembayaran, a.harga, e.no_faktur
                 FROM penjualan a
                 INNER JOIN pembeli b
                 ON a.id_pembeli = b.id
@@ -195,10 +209,10 @@ class PenjualanController extends Controller
                 ON a.id_motor = c.id
                 INNER JOIN jenis_motor d
                 ON c.id_jenis = d.id
-                INNER JOIN surat_jalan e
+                INNER JOIN faktur e
                 ON a.id = e.id_penjualan
-                INNER JOIN faktur f
-                ON e.id = f.id_surat_jalan';
+                INNER JOIN surat_jalan f
+                ON e.id = f.id_faktur';
         //$model = Penjualan::findBySql($sql)->all();
         $model = $connection->createCommand($sql);
         $penjualan = $model->queryAll();

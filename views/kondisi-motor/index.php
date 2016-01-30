@@ -19,6 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <?= Html::a('Buat Data Kondisi Motor', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
+    <div class="table-responsive">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -71,4 +72,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
+    </div>
 </div>
+

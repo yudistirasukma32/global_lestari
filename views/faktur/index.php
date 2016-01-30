@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>
         <?= Html::a('Buat Data Faktur', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+    <div class="table-responsive">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -29,7 +29,11 @@ $this->params['breadcrumbs'][] = $this->title;
             //'id_penjualan',
             'no_faktur',
             'nama_penerima',
-            'tgl',
+//            [
+//                'attribute' => 'tgl_faktur',
+//                'format' => ['date', 'php:d/m/Y']
+//            ],
+            'tgl_faktur',
             [
                 'attribute' => 'Jenis Motor',
                 'value' => 'penjualan0.motor0.jenisMotor0.nama',
@@ -48,5 +52,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+    </div>
 </div>

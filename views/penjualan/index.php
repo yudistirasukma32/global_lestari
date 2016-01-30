@@ -16,14 +16,40 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <p>
+
         <?= Html::a('Buat Data Penjualan', ['create'], ['class' => 'btn btn-success']) ?>
 
-        <a href="export"><button type="button" class="btn btn-primary" style="margin-left: 10px;">
-            <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Download Data Penjualan Motor
-        </button></a>
-    </p>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <!--<span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>-->
+                Menu
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" style="background:#f1f1f1;">
+                <li><a href="chart">Grafik Penjualan Motor</a></li>
+                <li><a href="export">Download Data Penjualan Motor</a></li>
+            </ul>
+        </div>
 
+
+        <!--
+        <div class="col-md-2">
+            <p>
+                <a href="chart"><button type="button" class="btn btn-primary" style="margin-left: 10px;">
+                        <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Grafik Penjualan Motor
+                    </button></a>
+
+                <a href="export"><button type="button" class="btn btn-primary" style="margin-left: 10px;">
+                        <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Download Data Penjualan Motor
+                    </button></a>
+
+            </p>
+        </div>-->
+        </div>
+
+
+
+    <div class="table-responsive">
     <?= GridView::widget([
 
         'dataProvider' => $dataProvider,
@@ -95,5 +121,5 @@ $this->params['breadcrumbs'][] = $this->title;
     ]);
 
     ?>
-
+</div>
 </div>

@@ -6,15 +6,15 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Penjualan */
 
-$this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Penjualans', 'url' => ['index']];
+$this->title = 'Data Penjualan';
+$this->params['breadcrumbs'][] = ['label' => 'Penjualan', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 
 <div class="penjualan-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?= Html::encode($this->title) ?> - <?= Html::encode($model->id) ?></h1>
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
@@ -34,10 +34,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_motor',
             'motor0.no_totok',
             'motor0.no_mesin',
-            'motor0.no_rangka',
+            'motor0.no_totok',
             'id_pembeli',
             'pembeli0.nama',
-            'tgl',
+            [
+                'attribute' => 'tgl',
+                'format' => ['date', 'php:d-m-Y']
+            ],
             'tipe_pembayaran',
             'harga',
             'keterangan:ntext',

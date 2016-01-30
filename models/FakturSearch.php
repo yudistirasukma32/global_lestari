@@ -21,7 +21,7 @@ class FakturSearch extends Faktur
     {
         return [
             [['id', 'id_penjualan'], 'integer'],
-            [['nama_penerima', 'tgl', 'no_faktur', 'keterangan', 'foto', 'nama'], 'safe'],
+            [['nama_penerima', 'tgl_faktur', 'no_faktur', 'keterangan', 'foto', 'nama'], 'safe'],
         ];
     }
 
@@ -45,9 +45,9 @@ class FakturSearch extends Faktur
     {
         $query = Faktur::find();
         $query->joinWith(['penjualan0']);
-        $query->join('LEFT JOIN', 'pembeli', 'penjualan.id_pembeli = pembeli.id');
-        $query->join('LEFT JOIN', 'motor', 'penjualan.id_motor = motor.id');
-        $query->join('LEFT JOIN', 'jenis_motor', 'jenis_motor.id = motor.id_jenis');
+        $query->join('INNER JOIN', 'pembeli', 'penjualan.id_pembeli = pembeli.id');
+        $query->join('INNER JOIN', 'motor', 'penjualan.id_motor = motor.id');
+        $query->join('INNER JOIN', 'jenis_motor', 'jenis_motor.id = motor.id_jenis');
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -79,7 +79,7 @@ class FakturSearch extends Faktur
         $query->andFilterWhere([
             'id' => $this->id,
             'id_penjualan' => $this->id_penjualan,
-            'tgl' => $this->tgl,
+            //'tgl_faktur' => $this->tgl_faktur,
 
         ]);
 
@@ -87,6 +87,7 @@ class FakturSearch extends Faktur
             ->andFilterWhere(['like', 'no_faktur', $this->no_faktur])
             ->andFilterWhere(['like', 'nama', $this->nama])
             ->andFilterWhere(['like', 'keterangan', $this->keterangan])
+            ->andFilterWhere(['like', 'tgl_faktur', $this->tgl_faktur])
             ->andFilterWhere(['like', 'foto', $this->foto]);
 
         return $dataProvider;

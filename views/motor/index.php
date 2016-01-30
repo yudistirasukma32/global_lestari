@@ -82,6 +82,17 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
                             <li><a href="#">JRD ARJUNA-X M/T 100cc</a></li>
                         </ul>
                     </div>
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Grafik Stok Motor
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" style="background:#f1f1f1;">
+                            <li><a href="chart">Kantor Surabaya</a></li>
+                            <!--<li><a href="chart-jkt">Kantor Jakarta</a></li>
+                            <li><a href="chart-pabrik">Pabrik</a></li>-->
+                        </ul>
+                    </div>
                 </div>
             </td>
 
@@ -106,7 +117,7 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
         ?>
 
     </div>
-
+    <div class="table-responsive">
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -165,5 +176,5 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
 
     ?>
 
-
+</div>
 </div>

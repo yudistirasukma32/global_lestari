@@ -48,7 +48,10 @@ ON motor.id_jenis = jenis_motor.id';
             //'id',
             'id_penjualan',
             'nama_penerima',
-            'tgl',
+            [
+                'attribute' => 'tgl_faktur',
+                'format' => ['date', 'php:d-m-Y']
+            ],
             'no_faktur',
             'keterangan:ntext',
             [

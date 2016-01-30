@@ -32,7 +32,10 @@ $this->params['breadcrumbs'][] = $this->title;
             'id_faktur',
             'faktur0.no_faktur',
             'alamat_pengiriman',
-            'tgl_pengiriman',
+            [
+                'attribute' => 'tgl_pengiriman',
+                'format' => ['date', 'php:d-m-Y']
+            ],
             'nama_penerima',
             'nama_pengirim',
             'keterangan:ntext',

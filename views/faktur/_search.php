@@ -22,7 +22,7 @@ use yii\widgets\ActiveForm;
 <!---->
 <!--    --><?php //echo $form->field($model, 'nama_penerima') ?>
     <?= $form->field($model, 'no_faktur') ?>
-    <?= $form->field($model, 'tgl') ?>
+    <?= $form->field($model, 'tgl_faktur') ?>
     <?php // echo $form->field($model, 'keterangan') ?>
 
     <?php // echo $form->field($model, 'foto') ?>

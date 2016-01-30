@@ -45,6 +45,10 @@ class Penjualan extends \yii\db\ActiveRecord
         return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis'])->with(['motor']);
     }
 
+    public function getNama() {
+        return $this->Motor0->JenisMotor0->nama;
+    }
+
     /**
      * @inheritdoc
      */
@@ -77,7 +81,7 @@ class Penjualan extends \yii\db\ActiveRecord
             'keterangan' => 'Keterangan',
             'foto_nota' => 'Foto Nota',
             'foto_ktp' => 'Foto Ktp',
-            'jenisMotor0.nama' => 'Jenis Motor',
+            'nama' => 'Jenis Motor',
         ];
     }
 

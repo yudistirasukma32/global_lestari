@@ -166,10 +166,10 @@ class FakturController extends Controller
     public function actionDelete($id)
     {
 
-        $no_faktur = $this->no_faktur;
+        //$no_faktur = $model->no_faktur;
         $user = Yii::$app->user->identity->username;
         $this->findModel($id)->delete();
-        Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Delete data faktur dengan id : '.$id_faktur.' ('.$no_faktur.') //  oleh user : '.$user.'")')
+        Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Delete data faktur dengan id : '.$id.' //  oleh user : '.$user.'")')
             ->execute();
 
         return $this->redirect(['index']);
