@@ -2,7 +2,6 @@
 
 /* @var $this yii\web\View */
 
-
 $this->title = 'Global Lestari Motorindo'; ?>
 <br/>
 <div class="site-index">
@@ -34,10 +33,10 @@ $this->title = 'Global Lestari Motorindo'; ?>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
             echo '<strong>INFO : </strong>';
             echo nl2br($model->content);
+            echo '<br/><br/><p style="font-size:12px;">Posted : '.$model->date.'</p>';
             echo '</div>';
         }
         ?>
-	
 
        <!-- <div class="row">
             <div class="col-lg-4">

@@ -19,35 +19,35 @@ $this->params['breadcrumbs'][] = $this->title;
 $stok1 = \app\models\Motor::find()
     ->select(['COUNT(motor.id) as id'])
     ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
-    ->where('id_jenis = 1 AND status="Belum Terjual" AND posisi = "Kantor Surabaya"')
+    ->where('id_jenis = 1 AND status="Belum Terjual" AND posisi = "Pabrik"')
     ->groupBy(['id_jenis'])
     ->all();
 
 $stok2 = \app\models\Motor::find()
     ->select(['COUNT(motor.id) as id'])
     ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
-    ->where('id_jenis = 2 AND status="Belum Terjual" AND posisi = "Kantor Surabaya"')
+    ->where('id_jenis = 2 AND status="Belum Terjual" AND posisi = "Pabrik"')
     ->groupBy(['id_jenis'])
     ->all();
 
 $stok3 = \app\models\Motor::find()
     ->select(['COUNT(motor.id) as id'])
     ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
-    ->where('id_jenis = 3 AND status="Belum Terjual" AND posisi = "Kantor Surabaya"')
+    ->where('id_jenis = 3 AND status="Belum Terjual" AND posisi = "Pabrik"')
     ->groupBy(['id_jenis'])
     ->all();
 
 $stok4 = \app\models\Motor::find()
     ->select(['COUNT(motor.id) as id'])
     ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
-    ->where('id_jenis = 4 AND status="Belum Terjual" AND posisi = "Kantor Surabaya"')
+    ->where('id_jenis = 4 AND status="Belum Terjual" AND posisi = "Pabrik"')
     ->groupBy(['id_jenis'])
     ->all();
 
 $stok5 = \app\models\Motor::find()
     ->select(['COUNT(motor.id) as id'])
     ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
-    ->where('id_jenis = 5 AND status="Belum Terjual" AND posisi = "Kantor Surabaya"')
+    ->where('id_jenis = 5 AND status="Belum Terjual" AND posisi = "Pabrik"')
     ->groupBy(['id_jenis'])
     ->all();
 
@@ -62,7 +62,7 @@ $kondisi1 =  \app\models\Motor::find()
     ->select(['COUNT(motor.id) as id'])
     ->join('LEFT JOIN', 'kondisi_motor', 'motor.id = kondisi_motor.id_motor')
     ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
-    ->where('kondisi="Siap Jual" AND posisi = "Kantor Surabaya"')
+    ->where('kondisi="Siap Jual" AND posisi = "Pabrik"')
     ->groupBy(['kondisi'])
     ->all();
 
@@ -70,7 +70,7 @@ $kondisi2 =  \app\models\Motor::find()
     ->select(['COUNT(motor.id) as id'])
     ->join('LEFT JOIN', 'kondisi_motor', 'motor.id = kondisi_motor.id_motor')
     ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
-    ->where('kondisi="Sedang disiapkan" AND posisi = "Kantor Surabaya"')
+    ->where('kondisi="Sedang disiapkan" AND posisi = "Pabrik"')
     ->groupBy(['kondisi'])
     ->all();
 
@@ -131,7 +131,7 @@ $kondisi3 =  \app\models\Motor::find()
                             'type' => 'pie'
                         ],
                         'title' => [
-                            'text' => 'Data Stok Motor Beijing Surabaya'
+                            'text' => 'Data Stok Motor Beijing Pabrik'
                         ],
                         'tooltip' => [
                             'pointFormat' => '{series.name}: <b>{point.percentage:.1f}%</b> - {point.y} Unit'

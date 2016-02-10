@@ -64,7 +64,7 @@ class MotorController extends Controller
     {
         $searchModel = new MotorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $dataProvider->pagination->pageSize=10;
+        //$dataProvider->pagination->pageSize=10;
 
         $model = new Motor();
 
@@ -75,11 +75,26 @@ class MotorController extends Controller
         ]);
     }
 
+    public function actionChartPabrik()
+    {
+        $searchModel = new MotorSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //$dataProvider->pagination->pageSize=10;
+
+        $model = new Motor();
+
+        return $this->render('chartpabrik', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+
+        ]);
+    }
+
     public function actionChartJkt()
     {
         $searchModel = new MotorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $dataProvider->pagination->pageSize=10;
+        //$dataProvider->pagination->pageSize=10;
 
         $model = new Motor();
 
@@ -538,8 +553,7 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Lain-lain" AND
-                d.nama LIKE "%BRAVO%"
+                d.nama LIKE "%BRAVO%" AND b.posisi = "Pabrik"
                 ORDER by d.nama,a.no_totok';
 
         $model = $connection->createCommand($sql);
@@ -596,8 +610,7 @@ class MotorController extends Controller
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
                 WHERE a.status = "Belum terjual" AND
-                b.posisi = "Lain-lain" AND
-                d.nama LIKE "%TROOPER%"
+                d.nama LIKE "%TROOPER%" AND b.posisi = "Pabrik"
                 ORDER by d.nama,a.no_totok';
 
         $model = $connection->createCommand($sql);
@@ -653,8 +666,7 @@ class MotorController extends Controller
                 ON a.id = c.id_motor
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
-                WHERE a.status = "Belum terjual" AND
-                b.posisi = "Lain-lain" AND
+                WHERE
                 d.nama LIKE "%MAXI%"
                 ORDER by d.nama,a.no_totok';
 
@@ -711,8 +723,7 @@ class MotorController extends Controller
                 ON a.id = c.id_motor
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
-                WHERE a.status = "Belum terjual" AND
-                b.posisi = "Lain-lain" AND
+                WHERE
                 d.nama LIKE "%EXOTIC%"
                 ORDER by d.nama,a.no_totok';
 
@@ -763,14 +774,13 @@ class MotorController extends Controller
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
                 concat(b.keterangan, " - ", c.keterangan) as keterangan  FROM motor a
-                INNER JOIN posisi_motor b
+                LEFT JOIN posisi_motor b
                 ON a.id = b.id_motor
-                INNER JOIN kondisi_motor c
+                LEFT JOIN kondisi_motor c
                 ON a.id = c.id_motor
                 INNER JOIN jenis_motor d
                 ON a.id_jenis = d.id
-                WHERE a.status = "Belum terjual" AND
-                b.posisi = "Lain-lain" AND
+                WHERE
                 d.nama LIKE "%SCOOTIC%"
                 ORDER by d.nama,a.no_totok';
 

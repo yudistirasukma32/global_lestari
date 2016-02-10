@@ -89,6 +89,8 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
                         </button>
                         <ul class="dropdown-menu" style="background:#f1f1f1;">
                             <li><a href="chart">Kantor Surabaya</a></li>
+                            <li><a href="#">Kantor Jakarta</a></li>
+                            <li><a href="#">Pabrik</a></li>
                             <!--<li><a href="chart-jkt">Kantor Jakarta</a></li>
                             <li><a href="chart-pabrik">Pabrik</a></li>-->
                         </ul>

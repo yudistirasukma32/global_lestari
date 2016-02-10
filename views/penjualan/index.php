@@ -16,7 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-
         <?= Html::a('Buat Data Penjualan', ['create'], ['class' => 'btn btn-success']) ?>
 
         <div class="btn-group" role="group">
@@ -30,8 +29,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 <li><a href="export">Download Data Penjualan Motor</a></li>
             </ul>
         </div>
-
-
         <!--
         <div class="col-md-2">
             <p>
@@ -46,8 +43,6 @@ $this->params['breadcrumbs'][] = $this->title;
             </p>
         </div>-->
         </div>
-
-
 
     <div class="table-responsive">
     <?= GridView::widget([

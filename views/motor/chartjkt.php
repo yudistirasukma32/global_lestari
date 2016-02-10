@@ -77,7 +77,6 @@ $stok5 = \app\models\Motor::find()
         $sco = $data['id'];
     }
 
-
 ?>
 
 <?= highcharts\HighCharts::widget([

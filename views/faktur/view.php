@@ -40,7 +40,7 @@ ON motor.id_jenis = jenis_motor.id';
             ],
         ]) ?>
     </p>
-
+    <div class="table-responsive">
     <?= DetailView::widget([
 
         'model' => $model,
@@ -62,5 +62,5 @@ ON motor.id_jenis = jenis_motor.id';
             ],
         ],
     ]) ?>
-
+</div>
 </div>
