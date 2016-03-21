@@ -51,12 +51,26 @@ $stok5 = \app\models\Motor::find()
     ->groupBy(['id_jenis'])
     ->all();
 
-//$stok1_laku = \app\models\Motor::find()
-//    ->select(['COUNT(motor.id) as id'])
-//    ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
-//    ->where('id_jenis = 1 AND status="Belum Terjual" AND posisi = "Kantor Surabaya"')
-//    ->groupBy(['id_jenis'])
-//    ->all();
+$stok8 = \app\models\Motor::find()
+    ->select(['COUNT(motor.id) as id'])
+    ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
+    ->where('id_jenis = 8 AND status="Belum Terjual" AND posisi = "Kantor Surabaya"')
+    ->groupBy(['id_jenis'])
+    ->all();
+
+$stok10 = \app\models\Motor::find()
+    ->select(['COUNT(motor.id) as id'])
+    ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
+    ->where('id_jenis = 10 AND status="Belum Terjual" AND posisi = "Kantor Surabaya"')
+    ->groupBy(['id_jenis'])
+    ->all();
+
+$stok11 = \app\models\Motor::find()
+    ->select(['COUNT(motor.id) as id'])
+    ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
+    ->where('id_jenis = 11 AND status="Belum Terjual" AND posisi = "Kantor Surabaya"')
+    ->groupBy(['id_jenis'])
+    ->all();
 
 $kondisi1 =  \app\models\Motor::find()
     ->select(['COUNT(motor.id) as id'])
@@ -73,15 +87,6 @@ $kondisi2 =  \app\models\Motor::find()
     ->where('kondisi="Sedang disiapkan" AND posisi = "Kantor Surabaya"')
     ->groupBy(['kondisi'])
     ->all();
-
-/*
-$kondisi3 =  \app\models\Motor::find()
-    ->select(['COUNT(motor.id) as id'])
-    ->join('LEFT JOIN', 'kondisi_motor', 'motor.id = kondisi_motor.id_motor')
-    ->join('LEFT JOIN', 'posisi_motor', 'motor.id = posisi_motor.id_motor')
-    ->where('kondisi="Rusak" AND posisi = "Kantor Surabaya"')
-    ->groupBy(['id_jenis'])
-    ->all();*/
 
 ?>
 
@@ -100,6 +105,15 @@ $kondisi3 =  \app\models\Motor::find()
     }
     foreach($stok5 as $data){
         $sco = $data['id'];
+    }
+    foreach($stok8 as $data){
+        $sporty = $data['id'];
+    }
+    foreach($stok10 as $data){
+        $exel = $data['id'];
+    }
+    foreach($stok11 as $data){
+        $roda = $data['id'];
     }
 
     foreach($kondisi1 as $data){
@@ -143,6 +157,10 @@ $kondisi3 =  \app\models\Motor::find()
                                 'Maxi',
                                 'Exotic',
                                 'Scootic',
+                                //'City One',
+                                //'Sporty',
+                                'Exel',
+                                //'Roda 3',
 
                             ]
                         ],
@@ -166,7 +184,11 @@ $kondisi3 =  \app\models\Motor::find()
                                     ['name' => 'Trooper','y'=> $trooper],
                                     ['name' => 'Maxi','y'=> $maxi],
                                     ['name' => 'Exotic','y'=> $exo],
-                                    ['name' => 'Scootic','y'=> $sco]]
+                                    ['name' => 'Scootic','y'=> $sco],
+                                    //['name' => 'City One','y'=> $city],
+                                    //['name' => 'Sporty','y'=> $sporty],
+                                    ['name' => 'Exel','y'=> $exel]],
+                                    //['name' => 'Roda 3','y'=> $roda]]
                             ],
                             //['name' => 'Laku', 'data' => [$bravo_laku, 1, 2, 0, 1]],
                         ]
@@ -188,15 +210,31 @@ $kondisi3 =  \app\models\Motor::find()
                         Maxi
                     </li>
                     <li class="list-group-item">
-                        <span class="badge" style="background-color: orange;"><?= $exo; ?></span>
+                        <span class="badge" style="background-color: sandybrown;"><?= $exo; ?></span>
                         Exotic
                     </li>
                     <li class="list-group-item">
-                        <span class="badge" style="background-color: rebeccapurple;"><?= $sco; ?></span>
+                        <span class="badge" style="background-color: mediumpurple;"><?= $sco; ?></span>
                         Scootic
                     </li>
+                    <!--                    <li class="list-group-item">-->
+                    <!--                        <span class="badge" style="background-color: deeppink;">--><?//= $city; ?><!--</span>-->
+                    <!--                        City One-->
+                    <!--                    </li>-->
+                    <!--                    <li class="list-group-item">-->
+                    <!--                        <span class="badge" style="background-color: #ccd232;">--><?//= $sporty; ?><!--</span>-->
+                    <!--                        Sporty-->
+                    <!--                    </li>-->
                     <li class="list-group-item">
-                        <span class="badge"><?= $bravo+$maxi+$sco+$trooper+$exo; ?></span>
+                        <span class="badge" style="background-color: hotpink;"><?= $exel; ?></span>
+                        Exel
+                    </li>
+<!--                    <li class="list-group-item">-->
+<!--                        <span class="badge" style="background-color: red;">--><?//= $roda; ?><!--</span>-->
+<!--                        Roda-->
+<!--                    </li>-->
+                    <li class="list-group-item">
+                        <span class="badge"><?= $bravo+$maxi+$sco+$trooper+$exo+$exel; ?></span>
                         Total
                     </li>
                 </ul>
@@ -269,10 +307,8 @@ $kondisi3 =  \app\models\Motor::find()
                         Total
                     </li>
                 </ul>
-
             </div>
         </div>
     </div>
-
 </div>
 

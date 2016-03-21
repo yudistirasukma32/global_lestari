@@ -97,10 +97,7 @@ $kondisi3 =  \app\models\Motor::find()
 //    }
 //    foreach($stok4 as $data){
 //        $exo = $data['id'];
-//    }
-//    foreach($stok5 as $data){
-//        $sco = $data['id'];
-//    }
+//
 
     foreach($kondisi1 as $data){
         $siapjual = $data['id'];
@@ -142,7 +139,6 @@ $kondisi3 =  \app\models\Motor::find()
                                 'Trooper',
                                 'Maxi',
                                 'Exotic',
-                                'Scootic',
 
                             ]
                         ],
@@ -165,8 +161,7 @@ $kondisi3 =  \app\models\Motor::find()
                                     ['name' => 'Bravo','y'=> $bravo],
                                     ['name' => 'Trooper','y'=> $trooper]],
 //                                    ['name' => 'Maxi','y'=> $maxi],
-//                                    ['name' => 'Exotic','y'=> $exo],
-//                                    ['name' => 'Scootic','y'=> $sco]]
+//                                    ['name' => 'Exotic','y'=> $exo]]
                             ],
                             //['name' => 'Laku', 'data' => [$bravo_laku, 1, 2, 0, 1]],
                         ]
@@ -190,10 +185,6 @@ $kondisi3 =  \app\models\Motor::find()
 <!--                    <li class="list-group-item">-->
 <!--                        <span class="badge" style="background-color: orange;">--><?//= $exo; ?><!--</span>-->
 <!--                        Exotic-->
-<!--                    </li>-->
-<!--                    <li class="list-group-item">-->
-<!--                        <span class="badge" style="background-color: rebeccapurple;">--><?//= $sco; ?><!--</span>-->
-<!--                        Scootic-->
 <!--                    </li>-->
                     <li class="list-group-item">
                         <span class="badge"><?= $bravo+$trooper; ?></span>

@@ -51,7 +51,11 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
                             <li><a href="surabaya-maxi">BEIJING MAXI M/T 125cc</a></li>
                             <li><a href="surabaya-exotic">BEIJING EXOTIC A/T 125cc</a></li>
                             <li><a href="surabaya-scootic">BEIJING SCOOTIC A/T 125cc</a></li>
-                            <li><a href="#">JRD ARJUNA-X M/T 100cc</a></li>
+
+                            <!--<li><a href="surabaya-sporty">BEIJING SPORTY M/T 200cc</a></li>-->
+                            <li><a href="surabaya-city">BEIJING CITY ONE M/T 150cc</a></li>
+                            <li><a href="surabaya-exel">BEIJING EXEL</a></li>
+                            <li><a href="surabaya-roda-3">BEIJING RODA 3</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group" >
@@ -65,7 +69,11 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
                             <li><a href="jakarta-maxi">BEIJING MAXI M/T 125cc</a></li>
                             <li><a href="jakarta-exotic">BEIJING EXOTIC A/T 125cc</a></li>
                             <li><a href="jakarta-scootic">BEIJING SCOOTIC A/T 125cc</a></li>
-                            <li><a href="#">JRD ARJUNA-X M/T 100cc</a></li>
+
+                            <li><a href="jakarta-sporty">BEIJING SPORTY M/T 200cc</a></li>
+                            <li><a href="jakarta-city">BEIJING CITY ONE M/T 150cc</a></li>
+                            <li><a href="jakarta-exel">BEIJING EXEL</a></li>
+                            <li><a href="jakarta-roda-3">BEIJING RODA 3</a></li>
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -79,7 +87,12 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
                             <li><a href="pabrik-maxi">BEIJING MAXI M/T 125cc</a></li>
                             <li><a href="pabrik-exotic">BEIJING EXOTIC A/T 125cc</a></li>
                             <li><a href="pabrik-scootic">BEIJING SCOOTIC A/T 125cc</a></li>
-                            <li><a href="#">JRD ARJUNA-X M/T 100cc</a></li>
+
+                            <li><a href="pabrik-sporty">BEIJING SPORTY M/T 200cc</a></li>
+                            <li><a href="pabrik-city">BEIJING CITY ONE M/T 150cc</a></li>
+                            <li><a href="pabrik-exel">BEIJING EXEL</a></li>
+                            <li><a href="pabrik-roda-3">BEIJING RODA 3</a></li>
+
                         </ul>
                     </div>
                     <div class="btn-group" role="group">
@@ -89,7 +102,7 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
                         </button>
                         <ul class="dropdown-menu" style="background:#f1f1f1;">
                             <li><a href="chart">Kantor Surabaya</a></li>
-                            <li><a href="#">Kantor Jakarta</a></li>
+                            <li><a href="chart-jakarta">Kantor Jakarta</a></li>
                             <li><a href="chart-pabrik">Pabrik</a></li>
                             <!--<li><a href="chart-jkt">Kantor Jakarta</a></li>
                             <li><a href="chart-pabrik">Pabrik</a></li>-->
