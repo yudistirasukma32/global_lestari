@@ -187,6 +187,89 @@ class MotorController extends Controller
      *  Print Data Stok Motor SURABAYA
      *
      * */
+    public function actionSurabayaSemua(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.no_totok, a.warna, a.no_rangka, a.no_mesin, c.kondisi, c.keterangan FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Kantor Surabaya"
+                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Seluruh_Motor_Surabaya_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR (KESELURUHAN)<br/> KANTOR SURABAYA </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>JENIS</th>
+                <th>NO TOTOK</th>
+                <th>WARNA</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['nama'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+
+
+        $sql2 = 'SELECT d.nama, count(a.id) as jumlah FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Kantor Surabaya"
+                GROUP BY d.nama
+                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+
+        $model = $connection->createCommand($sql2);
+        $jml = $model->queryAll();
+
+        echo '<br/><br/><table border="1" width="100%">
+        <thead>
+            <tr>
+
+                <th>JENIS</th>
+                <th>JUMLAH</th>
+            </tr>
+        </thead>';
+        foreach($jml as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['nama'].'</td>
+                    <td>'.$data['jumlah'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+
+    }
 
     public function actionSurabayaBravo(){
         $connection = \Yii::$app->db;
@@ -774,6 +857,90 @@ class MotorController extends Controller
      *
      * */
 
+    public function actionPabrikSemua(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.no_totok, a.warna, a.no_rangka, a.no_mesin, c.kondisi, c.keterangan FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Pabrik"
+                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Seluruh_Motor_Pabrik_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR (KESELURUHAN)<br/> PABRIK </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>JENIS</th>
+                <th>NO TOTOK</th>
+                <th>WARNA</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['nama'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+
+
+        $sql2 = 'SELECT d.nama, count(a.id) as jumlah FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Pabrik"
+                GROUP BY d.nama
+                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+
+        $model = $connection->createCommand($sql2);
+        $jml = $model->queryAll();
+
+        echo '<br/><br/><table border="1" width="100%">
+        <thead>
+            <tr>
+
+                <th>JENIS</th>
+                <th>JUMLAH</th>
+            </tr>
+        </thead>';
+        foreach($jml as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['nama'].'</td>
+                    <td>'.$data['jumlah'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+
+    }
+
     public function actionPabrikBravo(){
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
@@ -1296,6 +1463,90 @@ class MotorController extends Controller
      *
      * */
 
+    public function actionJakartaSemua(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.no_totok, a.warna, a.no_rangka, a.no_mesin, c.kondisi, c.keterangan FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Kantor Surabaya"
+                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Seluruh_Motor_Jakarta_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR (KESELURUHAN)<br/> KANTOR JAKARTA </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>JENIS</th>
+                <th>NO TOTOK</th>
+                <th>WARNA</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['nama'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+
+
+        $sql2 = 'SELECT d.nama, count(a.id) as jumlah FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Kantor Jakarta"
+                GROUP BY d.nama
+                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+
+        $model = $connection->createCommand($sql2);
+        $jml = $model->queryAll();
+
+        echo '<br/><br/><table border="1" width="100%">
+        <thead>
+            <tr>
+
+                <th>JENIS</th>
+                <th>JUMLAH</th>
+            </tr>
+        </thead>';
+        foreach($jml as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['nama'].'</td>
+                    <td>'.$data['jumlah'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+
+    }
+
     public function actionJakartaBravo(){
         $connection = \Yii::$app->db;
         $sql = 'SELECT d.nama, a.id, a.warna, a.no_totok, a.no_rangka, a.no_mesin, b.posisi, c.kondisi,
@@ -1816,6 +2067,92 @@ class MotorController extends Controller
             ';
         }
         echo '</table>';
+    }
+
+
+
+    public function actionLain(){
+        $connection = \Yii::$app->db;
+        $sql = 'SELECT d.nama, a.no_totok, a.warna, a.no_rangka, a.no_mesin, c.kondisi, c.keterangan FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Lain-lain"
+                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+
+        $model = $connection->createCommand($sql);
+        $sby = $model->queryAll();
+
+        $filename = 'Data Stok Seluruh_Motor_Lain2_'.Date('YmdGis').'.xls';
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=".$filename);
+        echo '<table border="1" width="100%">
+        <p style="text-align: center;">LAPORAN DATA STOK MOTOR (KESELURUHAN)<br/> LAIN-LAIN (LAKU/DIKIRIM KELUAR/TIDAK BERADA DI KANTOR & PABRIK) </p><br/><br/>
+        <p>';
+        echo '</p><p>';
+
+        echo '</p><p>';
+        echo date('d/m/Y');
+        echo'</p>
+        <thead>
+            <tr>
+
+                <th>JENIS</th>
+                <th>NO TOTOK</th>
+                <th>WARNA</th>
+                <th>NO RANGKA</th>
+                <th>NO MESIN</th>
+                <th>KONDISI</th>
+                <th>KETERANGAN</th>
+            </tr>
+        </thead>';
+        foreach($sby as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['nama'].'</td>
+                    <td>'.$data['no_totok'].'</td>
+                    <td>'.$data['warna'].'</td>
+                    <td>'.$data['no_rangka'].'</td>
+                    <td>'.$data['no_mesin'].'</td>
+                    <td>'.$data['kondisi'].'</td>
+                    <td>'.$data['keterangan'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+
+
+        $sql2 = 'SELECT d.nama, count(a.id) as jumlah FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Lain-lain"
+                GROUP BY d.nama
+                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+
+        $model = $connection->createCommand($sql2);
+        $jml = $model->queryAll();
+
+        echo '<br/><br/><table border="1" width="100%">
+        <thead>
+            <tr>
+
+                <th>JENIS</th>
+                <th>JUMLAH</th>
+            </tr>
+        </thead>';
+        foreach($jml as $data){
+            echo '
+                <tr>
+
+                    <td>'.$data['nama'].'</td>
+                    <td>'.$data['jumlah'].'</td>
+                </tr>
+            ';
+        }
+        echo '</table>';
+
     }
 
     /**
