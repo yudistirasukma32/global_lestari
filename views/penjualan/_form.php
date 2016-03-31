@@ -18,9 +18,9 @@ if($model->isNewRecord) {
 $motor = \app\models\Motor::findBySql($sql)->all();
 $listData=\yii\helpers\ArrayHelper::map($motor,'id','warna');
 
-$sql2 = 'SELECT id, concat(id, " - ", nama, " - ", alamat, " - ", kota) as nama from pembeli';
+$sql2 = 'SELECT id, concat(id, " - ", nama_lengkap, " - ", alamat, " - ", kota) as nama_lengkap from pembeli';
 $pembeli = \app\models\Pembeli::findBySql($sql2)->all();
-$listData3=\yii\helpers\ArrayHelper::map($pembeli,'id','nama');
+$listData3=\yii\helpers\ArrayHelper::map($pembeli,'id','nama_lengkap');
 
 ?>
 <!--<div class="jumbotron" style="background-color : lightgreen;"><b>Info :</b> Data Motor yang tersedia adalah Data Motor dengan kondisi <b>'siap jual'</b> saja.</div>-->

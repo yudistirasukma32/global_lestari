@@ -42,11 +42,7 @@ class Penjualan extends \yii\db\ActiveRecord
 
     public function getJenisMotor0()
     {
-        return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis'])->with(['motor']);
-    }
-
-    public function getNama() {
-        return $this->Motor0->JenisMotor0->nama;
+        return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis'])->via('motor0');
     }
 
     /**
@@ -81,7 +77,8 @@ class Penjualan extends \yii\db\ActiveRecord
             'keterangan' => 'Keterangan',
             'foto_nota' => 'Foto Nota',
             'foto_ktp' => 'Foto Ktp',
-            'nama' => 'Jenis Motor',
+            'jenisMotor0.nama' => 'Jenis Motor',
+            'pembeli0.nama_lengkap' => 'Nama Lengkap',
         ];
     }
 
@@ -96,16 +93,5 @@ class Penjualan extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getIdMotor()
-    {
-        return $this->hasOne(Motor::className(), ['id' => 'id_motor']);
-    }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getIdPembeli()
-    {
-        return $this->hasOne(Pembeli::className(), ['id' => 'id_pembeli']);
-    }
 }

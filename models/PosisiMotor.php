@@ -30,7 +30,7 @@ class PosisiMotor extends \yii\db\ActiveRecord
 
     public function getJenisMotor0()
     {
-        return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis'])->with(['motor'])->from(JenisMotor::tableName());
+        return $this->hasOne(JenisMotor::className(), ['id' => 'id_jenis'])->via('motor0');
     }
     /**
      * @inheritdoc

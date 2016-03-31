@@ -19,7 +19,7 @@ class PembeliSearch extends Pembeli
     {
         return [
             [['id'], 'integer'],
-            [['nama', 'no_ktp', 'alamat', 'kota', 'no_tlp'], 'safe'],
+            [['nama_lengkap', 'no_ktp', 'alamat', 'kota', 'no_tlp'], 'safe'],
         ];
     }
 
@@ -62,7 +62,7 @@ class PembeliSearch extends Pembeli
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'nama', $this->nama])
+        $query->andFilterWhere(['like', 'nama_lengkap', $this->nama_lengkap])
             ->andFilterWhere(['like', 'no_ktp', $this->no_ktp])
             ->andFilterWhere(['like', 'alamat', $this->alamat])
             ->andFilterWhere(['like', 'kota', $this->kota])

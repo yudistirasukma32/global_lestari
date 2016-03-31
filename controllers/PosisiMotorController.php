@@ -71,10 +71,10 @@ class PosisiMotorController extends Controller
             $id_motor = $_POST['PosisiMotor']['id_motor'];
             $posisi = $_POST['PosisiMotor']['posisi'];
 
-            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data posisi motor : ' . $id_motor . ' // di '. $posisi .' // oleh user : ' . $user . '")')
+            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data posisi motor dgn id motor : ' . $id_motor . ' // di '. $posisi .' // oleh user : ' . $user . '")')
                 ->execute();
 
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);;
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -99,10 +99,10 @@ class PosisiMotorController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $posisi_baru = $_POST['PosisiMotor']['posisi'];
-            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Update data posisi motor : ' . $id_motor . ' // dari '. $posisi_lama .' ke '. $posisi_baru .' oleh user : ' . $user . '")')
+            Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Update data posisi motor dgn id motor : ' . $id_motor . ' // dari '. $posisi_lama .' ke '. $posisi_baru .' oleh user : ' . $user . '")')
                 ->execute();
 
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);;
         } else {
             return $this->render('update', [
                 'model' => $model,

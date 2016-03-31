@@ -35,12 +35,14 @@ $this->params['breadcrumbs'][] = $this->title;
 //            ],
             'tgl_faktur',
             [
-                'attribute' => 'Jenis Motor',
+                'attribute' => 'jenisMotor0.nama',
                 'value' => 'penjualan0.motor0.jenisMotor0.nama',
+                'filter' => Html::activeDropDownList($searchModel, 'nama', \yii\helpers\ArrayHelper::map(\app\models\JenisMotor::find()->select('nama')->distinct()->all(), 'nama','nama'),
+                    ['class'=>'form-control','prompt' => 'Semua']),
             ],
             [
                 'attribute' => 'Nama Pembeli',
-                'value' => 'penjualan0.pembeli0.nama',
+                'value' => 'pembeli0.nama_lengkap',
             ],
             [
                 'attribute' => 'Tgl Penjualan',

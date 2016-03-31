@@ -15,14 +15,14 @@ class PenjualanSearch extends Penjualan
     /**
      * @inheritdoc
      */
-
     public $nama;
+    public $nama_lengkap;
 
     public function rules()
     {
         return [
             [['id', 'id_motor', 'id_pembeli', 'harga'], 'integer'],
-            [['tgl', 'tipe_pembayaran', 'nama', 'keterangan'], 'safe'],
+            [['tgl', 'tipe_pembayaran', 'nama', 'keterangan', 'nama_lengkap'], 'safe'],
         ];
     }
 
@@ -48,17 +48,16 @@ class PenjualanSearch extends Penjualan
         $query = Penjualan::find();
         $query->joinWith(['pembeli0']);
         $query->joinWith(['motor0']);
-        $query->join('LEFT JOIN', 'jenis_motor', 'jenis_motor.id = motor.id_jenis');
-
+        $query->joinWith(['jenisMotor0']);
         // add conditions that should always apply here
         //var_dump($sql);
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
 
-        $dataProvider->sort->attributes['nama']=[
-            'asc'=>['Pembeli.nama' => SORT_ASC],
-            'desc'=>['Pembeli.nama'=> SORT_DESC],
+        $dataProvider->sort->attributes['nama_lengkap']=[
+            'asc'=>['pembeli.nama_lengkap' => SORT_ASC],
+            'desc'=>['pembeli.nama_lengkap'=> SORT_DESC],
         ];
 
         $dataProvider->sort->attributes['jenisMotor0.nama']=[
@@ -79,13 +78,15 @@ class PenjualanSearch extends Penjualan
         $query->andFilterWhere([
             'id' => $this->id,
             'id_motor' => $this->id_motor,
-            //'id_pembeli' => $this->id_pembeli,
             'tgl' => $this->tgl,
             'harga' => $this->harga,
+            'nama'=> $this->nama,
         ]);
 
         $query->andFilterWhere(['like', 'tipe_pembayaran', $this->tipe_pembayaran])
+            ->andFilterWhere(['like', 'nama_lengkap', $this->nama_lengkap])
             ->andFilterWhere(['like', 'keterangan', $this->keterangan]);
+
             //->andFilterWhere(['like', 'nama', $this->motor0->jenisMotor0->nama]);
             //->andFilterWhere(['like', 'id_jenis', $this->jenisMotor0.nama]);
 

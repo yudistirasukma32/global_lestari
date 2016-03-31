@@ -16,12 +16,13 @@ class FakturSearch extends Faktur
      * @inheritdoc
      */
     public $nama;
+    public $nama_lengkap;
 
     public function rules()
     {
         return [
             [['id', 'id_penjualan'], 'integer'],
-            [['nama_penerima', 'tgl_faktur', 'no_faktur', 'keterangan', 'foto', 'nama'], 'safe'],
+            [['nama_penerima', 'tgl_faktur', 'no_faktur', 'keterangan', 'foto', 'nama','nama_lengkap'], 'safe'],
         ];
     }
 
@@ -67,20 +68,18 @@ class FakturSearch extends Faktur
         ];
 
         $dataProvider->sort->attributes['Nama Pembeli']=[
-            'asc'=>['pembeli.nama' => SORT_ASC],
-            'desc'=>['pembeli.nama'=> SORT_DESC],
+            'asc'=>['pembeli.nama_lengkap' => SORT_ASC],
+            'desc'=>['pembeli.nama_lengkap'=> SORT_DESC],
         ];
 
-        $dataProvider->sort->attributes['Jenis Motor']=[
-            'asc'=>['jenis_motor.nama' => SORT_ASC],
-            'desc'=>['jenis_motor.nama'=> SORT_DESC],
+        $dataProvider->sort->attributes['jenisMotor0.nama']=[
+            'asc'=>['motor.id_jenis' => SORT_ASC],
+            'desc'=>['motor.id_jenis'=> SORT_DESC],
         ];
 
         $query->andFilterWhere([
             'id' => $this->id,
             'id_penjualan' => $this->id_penjualan,
-            //'tgl_faktur' => $this->tgl_faktur,
-
         ]);
 
         $query->andFilterWhere(['like', 'nama_penerima', $this->nama_penerima])
@@ -88,6 +87,7 @@ class FakturSearch extends Faktur
             ->andFilterWhere(['like', 'nama', $this->nama])
             ->andFilterWhere(['like', 'keterangan', $this->keterangan])
             ->andFilterWhere(['like', 'tgl_faktur', $this->tgl_faktur])
+            ->andFilterWhere(['like', 'nama_lengkap', $this->nama_lengkap])
             ->andFilterWhere(['like', 'foto', $this->foto]);
 
         return $dataProvider;

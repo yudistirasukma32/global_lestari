@@ -47,7 +47,7 @@ class MotorSearch extends Motor
     {
         $query = Motor::find();
         $query->joinWith(['jenisMotor0']);
-        $query->innerJoinWith(['posisiMotor0']);
+        $query->JoinWith(['posisiMotor0']);
 
         // add conditions that should always apply here
 
@@ -75,7 +75,7 @@ class MotorSearch extends Motor
 
         // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
+            //'id' => $this->id,
             'no_totok' => $this->no_totok,
             //'id_jenis' => $this->id_jenis,
         ]);

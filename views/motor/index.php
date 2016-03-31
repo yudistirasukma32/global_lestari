@@ -152,11 +152,14 @@ $listData=\yii\helpers\ArrayHelper::map($jenismotor,'id','nama');
             [
                 'attribute' => 'id',
                 'value' => 'id',
+                'filter' => false,
                 'contentOptions'=>['style'=>'width: 75px;'],
             ],
             [
                 'attribute' => 'nama',
                 'value' => 'jenisMotor0.nama',
+                'filter' => Html::activeDropDownList($searchModel, 'nama', \yii\helpers\ArrayHelper::map(\app\models\JenisMotor::find()->select('nama')->distinct()->all(), 'nama','nama'),
+                    ['class'=>'form-control','prompt' => 'Semua']),
             ],
             [
                 'attribute' => 'warna',

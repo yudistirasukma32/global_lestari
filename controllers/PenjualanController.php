@@ -103,7 +103,7 @@ class PenjualanController extends Controller
                         ->execute();
                     Yii::$app->db->createCommand('UPDATE posisi_motor SET posisi="Lain-lain" WHERE id_motor='.$id_motor)
                         ->execute();
-                    Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data penjualan dengan id : '.$id_penjualan.' // oleh user : '.$user.'")')
+                    Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data penjualan dengan id penj : '.$id_penjualan.' // oleh user : '.$user.'")')
                         ->execute();
 
                     return $this->redirect(['view','id'=>$model->id]);
@@ -160,7 +160,7 @@ class PenjualanController extends Controller
                         ->execute();
                     Yii::$app->db->createCommand('UPDATE posisi_motor SET posisi="Lain-lain" WHERE id_motor='.$id_motor)
                         ->execute();
-                    Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data penjualan dengan id : '.$id_penjualan.' // oleh user : '.$user.'")')
+                    Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data penjualan dengan id penj : '.$id_penjualan.' // oleh user : '.$user.'")')
                         ->execute();
 
                     return $this->redirect(['view','id'=>$model->id]);
@@ -200,7 +200,7 @@ class PenjualanController extends Controller
     public function actionExport(){
         $connection = \Yii::$app->db;
         $sql = 'SELECT a.id, a.id_motor, a.id_pembeli, d.nama as jenis_motor, c.no_totok,
-                c.no_rangka, c.no_mesin, c.warna, b.nama as pembeli, DATE_FORMAT(a.tgl,"%d/%m/%Y") as tgl,
+                c.no_rangka, c.no_mesin, c.warna, b.nama_lengkap as pembeli, DATE_FORMAT(a.tgl,"%d/%m/%Y") as tgl,
                 a.tipe_pembayaran, a.harga, e.no_faktur
                 FROM penjualan a
                 INNER JOIN pembeli b

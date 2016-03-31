@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\Pembeli */
 
-$this->title = $model->nama;
+$this->title = $model->nama_lengkap;
 $this->params['breadcrumbs'][] = ['label' => 'Pembelis', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'nama',
+            'nama_lengkap',
             'no_ktp',
             'alamat',
             'kota',

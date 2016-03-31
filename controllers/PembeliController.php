@@ -67,7 +67,7 @@ class PembeliController extends Controller
 
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
-                $id_pembeli = $model->nama;
+                $id_pembeli = $model->nama_lengkap;
 
                 Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Insert data pembeli dengan nama : '.$id_pembeli.' // oleh user : '.$user.'")')
                     ->execute();
@@ -110,7 +110,7 @@ class PembeliController extends Controller
     public function actionDelete($id)
     {
         $model = $this->findModel($id);
-        $nama = $model->nama;
+        $nama = $model->nama_lengkap;
         $user = Yii::$app->user->identity->username;
 
         $this->findModel($id)->delete();

@@ -56,7 +56,8 @@ class Faktur extends \yii\db\ActiveRecord
             'no_faktur' => 'No Faktur',
             'keterangan' => 'Keterangan',
             'foto' => 'Foto',
-            'nama' => 'Nama Pembeli',
+            'pembeli0.nama_lengkap' => 'Nama Pembeli',
+            'jenisMotor0.nama' => 'Jenis Motor',
         ];
     }
 
@@ -66,6 +67,11 @@ class Faktur extends \yii\db\ActiveRecord
     public function getPenjualan0()
     {
         return $this->hasOne(Penjualan::className(), ['id' => 'id_penjualan']);
+    }
+
+    public function getPembeli0()
+    {
+        return $this->hasOne(Pembeli::className(), ['id' => 'id_pembeli'])->via('penjualan0');
     }
 
     /**

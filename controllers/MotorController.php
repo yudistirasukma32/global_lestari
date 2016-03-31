@@ -245,7 +245,12 @@ class MotorController extends Controller
                 LEFT JOIN jenis_motor d ON d.id = a.id_jenis
                 WHERE b.posisi = "Kantor Surabaya"
                 GROUP BY d.nama
-                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+                UNION ALL
+                SELECT "TOTAL", COUNT(a.id) as jumlah FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Kantor Surabaya"';
 
         $model = $connection->createCommand($sql2);
         $jml = $model->queryAll();
@@ -915,7 +920,12 @@ class MotorController extends Controller
                 LEFT JOIN jenis_motor d ON d.id = a.id_jenis
                 WHERE b.posisi = "Pabrik"
                 GROUP BY d.nama
-                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+                UNION ALL
+                SELECT "TOTAL", COUNT(a.id) as jumlah FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Pabrik"';
 
         $model = $connection->createCommand($sql2);
         $jml = $model->queryAll();
@@ -1521,7 +1531,12 @@ class MotorController extends Controller
                 LEFT JOIN jenis_motor d ON d.id = a.id_jenis
                 WHERE b.posisi = "Kantor Jakarta"
                 GROUP BY d.nama
-                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+                UNION ALL
+                SELECT "TOTAL", COUNT(a.id) as jumlah FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Kantor Jakarta"';
 
         $model = $connection->createCommand($sql2);
         $jml = $model->queryAll();
@@ -2129,7 +2144,12 @@ class MotorController extends Controller
                 LEFT JOIN jenis_motor d ON d.id = a.id_jenis
                 WHERE b.posisi = "Lain-lain"
                 GROUP BY d.nama
-                ORDER by d.nama asc, a.id_jenis asc, a.no_totok asc';
+              UNION ALL
+                SELECT "TOTAL", COUNT(a.id) as jumlah FROM Motor a
+                LEFT JOIN posisi_motor b  ON a.id = b.id_motor
+                LEFT JOIN kondisi_motor c ON a.id = c.id_motor
+                LEFT JOIN jenis_motor d ON d.id = a.id_jenis
+                WHERE b.posisi = "Lain-lain"';
 
         $model = $connection->createCommand($sql2);
         $jml = $model->queryAll();

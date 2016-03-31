@@ -36,7 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'motor0.no_mesin',
             'motor0.no_totok',
             'id_pembeli',
-            'pembeli0.nama',
+            'pembeli0.nama_lengkap',
             [
                 'attribute' => 'tgl',
                 'format' => ['date', 'php:d-m-Y']

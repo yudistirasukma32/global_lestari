@@ -35,6 +35,8 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'jenisMotor0.nama',
                 'value' => 'motor0.jenisMotor0.nama',
+                'filter' => Html::activeDropDownList($searchModel, 'nama', \yii\helpers\ArrayHelper::map(\app\models\JenisMotor::find()->select('nama')->distinct()->all(), 'nama','nama'),
+                    ['class'=>'form-control','prompt' => 'Semua']),
             ],
             [
                 'attribute' => 'no_totok',

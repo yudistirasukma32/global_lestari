@@ -30,8 +30,8 @@ class Pembeli extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nama'], 'required'],
-            [['nama', 'kota'], 'string', 'max' => 50],
+            [['nama_lengkap'], 'required'],
+            [['nama_lengkap', 'kota'], 'string', 'max' => 50],
             [['no_ktp'], 'string', 'max' => 20],
             [['alamat'], 'string', 'max' => 100],
             [['no_tlp'], 'string', 'max' => 12],
@@ -45,7 +45,7 @@ class Pembeli extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'nama' => 'Nama',
+            'nama_lengkap' => 'Nama',
             'no_ktp' => 'No Ktp',
             'alamat' => 'Alamat',
             'kota' => 'Kota',

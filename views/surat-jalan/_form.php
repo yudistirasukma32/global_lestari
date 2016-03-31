@@ -12,7 +12,7 @@ use dosamigos\datepicker\DatePicker;
 <?php
 
 if($model->isNewRecord) {
-    $sql = 'SELECT a.id, concat(a.no_faktur, " - ", a.nama_penerima, " - ", a.tgl) as keterangan
+    $sql = 'SELECT a.id, concat(a.no_faktur, " - ", a.nama_penerima, " - ", a.tgl_faktur) as keterangan
 FROM faktur a
 INNER JOIN penjualan b
 ON a.id_penjualan = b.id
@@ -24,7 +24,7 @@ INNER JOIN jenis_motor e
 ON d.id_jenis = e.id
 WHERE a.id not in(Select id_faktur FROM surat_jalan) ORDER by a.id';
 } else {
-    $sql = 'SELECT a.id, concat(a.no_faktur, " - ", a.nama_penerima, " - ", a.tgl) as keterangan
+    $sql = 'SELECT a.id, concat(a.no_faktur, " - ", a.nama_penerima, " - ", a.tgl_faktur) as keterangan
 FROM faktur a
 INNER JOIN penjualan b
 ON a.id_penjualan = b.id

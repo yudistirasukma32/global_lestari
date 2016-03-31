@@ -58,6 +58,8 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'jenisMotor0.nama',
                 'value' => 'motor0.jenisMotor0.nama',
+                'filter' => Html::activeDropDownList($searchModel, 'nama', \yii\helpers\ArrayHelper::map(\app\models\JenisMotor::find()->select('nama')->distinct()->all(), 'nama','nama'),
+                    ['class'=>'form-control','prompt' => 'Semua']),
             ],
 //            [
 //                'attribute' => 'id_motor',
@@ -65,8 +67,8 @@ $this->params['breadcrumbs'][] = $this->title;
 //                'contentOptions'=>['style'=>'width: 75px;'],
 //            ],
             [
-                'attribute' => 'nama',
-                'value' => 'pembeli0.nama',
+                'attribute' => 'nama_lengkap',
+                'value' => 'pembeli0.nama_lengkap',
             ],
             'tipe_pembayaran',
             'harga',

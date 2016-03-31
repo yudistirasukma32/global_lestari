@@ -19,12 +19,13 @@ class KondisiMotorSearch extends KondisiMotor
     public $no_totok;
     public $no_rangka;
     public $no_mesin;
+    public $nama;
 
     public function rules()
     {
         return [
             [['id', 'id_motor'], 'integer'],
-            [['kondisi','keterangan','no_totok','no_rangka','no_mesin'], 'safe'],
+            [['kondisi','keterangan','no_totok','no_rangka','no_mesin','nama'], 'safe'],
         ];
     }
 
@@ -47,8 +48,8 @@ class KondisiMotorSearch extends KondisiMotor
     public function search($params)
     {
         $query = KondisiMotor::find();
-        $query->joinWith(['motor0']);
-        $query->where('status="belum terjual"');
+        $query->joinWith(['motor0','jenisMotor0']);
+//        $query->where('status="belum terjual"');
 
         // add conditions that should always apply here
 
@@ -88,10 +89,10 @@ class KondisiMotorSearch extends KondisiMotor
         $query->andFilterWhere([
             'id' => $this->id,
             'id_motor' => $this->id_motor,
-            //'keterangan' => $this->keterangan,
             'no_totok'=> $this->no_totok,
             'no_rangka'=> $this->no_rangka,
             'no_mesin'=> $this->no_mesin,
+            'nama'=> $this->nama,
         ]);
 
         $query->andFilterWhere(['like', 'kondisi', $this->kondisi])
