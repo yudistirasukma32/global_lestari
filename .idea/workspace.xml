@@ -2,39 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e69c274-ca8f-4e61-ab6d-c6c39f82b00f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dump/global_lestari.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dump/global_lestari_db posisi sby lain2.sql" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/global_lestari_finale.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/KondisiMotorController.php" afterPath="$PROJECT_DIR$/controllers/KondisiMotorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/MotorController.php" afterPath="$PROJECT_DIR$/controllers/MotorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/PembeliController.php" afterPath="$PROJECT_DIR$/controllers/PembeliController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/PenjualanController.php" afterPath="$PROJECT_DIR$/controllers/PenjualanController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/PosisiMotorController.php" afterPath="$PROJECT_DIR$/controllers/PosisiMotorController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Faktur.php" afterPath="$PROJECT_DIR$/models/Faktur.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/FakturSearch.php" afterPath="$PROJECT_DIR$/models/FakturSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/KondisiMotor.php" afterPath="$PROJECT_DIR$/models/KondisiMotor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/KondisiMotorSearch.php" afterPath="$PROJECT_DIR$/models/KondisiMotorSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/MotorSearch.php" afterPath="$PROJECT_DIR$/models/MotorSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Pembeli.php" afterPath="$PROJECT_DIR$/models/Pembeli.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/PembeliSearch.php" afterPath="$PROJECT_DIR$/models/PembeliSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/Penjualan.php" afterPath="$PROJECT_DIR$/models/Penjualan.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/PenjualanSearch.php" afterPath="$PROJECT_DIR$/models/PenjualanSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/PosisiMotor.php" afterPath="$PROJECT_DIR$/models/PosisiMotor.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/PosisiMotorSearch.php" afterPath="$PROJECT_DIR$/models/PosisiMotorSearch.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/faktur/_form.php" afterPath="$PROJECT_DIR$/views/faktur/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/faktur/index.php" afterPath="$PROJECT_DIR$/views/faktur/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/kondisi-motor/index.php" afterPath="$PROJECT_DIR$/views/kondisi-motor/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/motor/chart.php" afterPath="$PROJECT_DIR$/views/motor/chart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/motor/chartpabrik.php" afterPath="$PROJECT_DIR$/views/motor/chartpabrik.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/motor/index.php" afterPath="$PROJECT_DIR$/views/motor/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pembeli/_form.php" afterPath="$PROJECT_DIR$/views/pembeli/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pembeli/index.php" afterPath="$PROJECT_DIR$/views/pembeli/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/pembeli/view.php" afterPath="$PROJECT_DIR$/views/pembeli/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/penjualan/_form.php" afterPath="$PROJECT_DIR$/views/penjualan/_form.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/penjualan/index.php" afterPath="$PROJECT_DIR$/views/penjualan/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/penjualan/view.php" afterPath="$PROJECT_DIR$/views/penjualan/view.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/posisi-motor/index.php" afterPath="$PROJECT_DIR$/views/posisi-motor/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/surat-jalan/_form.php" afterPath="$PROJECT_DIR$/views/surat-jalan/_form.php" />
     </list>
     <ignored path="global_lestari.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,7 +36,7 @@
       <file leaf-file-name="MotorController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/MotorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
+            <state vertical-scroll-proportion="0.0">
               <caret line="930" column="34" selection-start-line="930" selection-start-column="34" selection-end-line="930" selection-end-column="34" />
               <folding>
                 <element signature="e#379#630#0#PHP" expanded="false" />
@@ -347,7 +317,7 @@
       <file leaf-file-name="PembeliController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/PembeliController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
+            <state vertical-scroll-proportion="0.0">
               <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
               <folding>
                 <marker date="1458720362968" expanded="true" signature="1706:1827" placeholder="insert into logs..." />
@@ -357,11 +327,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chart.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="chart.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/motor/chart.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.807692">
-              <caret line="374" column="138" selection-start-line="374" selection-start-column="138" selection-end-line="374" selection-end-column="138" />
+            <state vertical-scroll-proportion="0.799591">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="e#5997#6058#0#PHP" expanded="false" />
                 <element signature="e#6063#6126#0#PHP" expanded="false" />
@@ -383,8 +353,6 @@
                 <element signature="e#7103#7163#0#PHP" expanded="false" />
                 <element signature="e#7169#7236#0#PHP" expanded="false" />
                 <element signature="e#7241#7315#0#PHP" expanded="false" />
-                <element signature="n#style#0;n#span#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#li#14;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -393,7 +361,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/posisi-motor/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.384615">
+            <state vertical-scroll-proportion="0.0">
               <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
               <folding />
             </state>
@@ -403,7 +371,7 @@
       <file leaf-file-name="PosisiMotorController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/PosisiMotorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.230769">
+            <state vertical-scroll-proportion="0.0">
               <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
               <folding>
                 <marker date="1459397469475" expanded="true" signature="1801:1954" placeholder="insert into logs..." />
@@ -417,7 +385,7 @@
       <file leaf-file-name="KondisiMotorController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/KondisiMotorController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="5.3846154">
+            <state vertical-scroll-proportion="0.0">
               <caret line="101" column="46" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
               <folding>
                 <marker date="1459397481156" expanded="true" signature="1812:1979" placeholder="insert into logs..." />
@@ -431,7 +399,7 @@
       <file leaf-file-name="PosisiMotor.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/PosisiMotor.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-26.115385">
+            <state vertical-scroll-proportion="0.0">
               <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="48" />
               <folding />
             </state>
@@ -441,7 +409,7 @@
       <file leaf-file-name="PosisiMotorSearch.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/PosisiMotorSearch.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.384615">
+            <state vertical-scroll-proportion="0.0">
               <caret line="51" column="0" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="50" />
               <folding />
             </state>
@@ -451,18 +419,18 @@
       <file leaf-file-name="KondisiMotorSearch.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/KondisiMotorSearch.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
+            <state vertical-scroll-proportion="0.0">
               <caret line="51" column="0" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PenjualanController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PenjualanController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/PenjualanController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.190184">
-              <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+            <state vertical-scroll-proportion="-49.692307">
+              <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
               <folding>
                 <element signature="e#1844#4098#0#PHP" expanded="false" />
                 <element signature="e#4295#6562#0#PHP" expanded="false" />
@@ -542,12 +510,12 @@
         <option value="$PROJECT_DIR$/models/Faktur.php" />
         <option value="$PROJECT_DIR$/models/FakturSearch.php" />
         <option value="$PROJECT_DIR$/views/motor/chartpabrik.php" />
-        <option value="$PROJECT_DIR$/views/motor/chart.php" />
         <option value="$PROJECT_DIR$/models/PosisiMotorSearch.php" />
         <option value="$PROJECT_DIR$/models/KondisiMotorSearch.php" />
         <option value="$PROJECT_DIR$/controllers/PenjualanController.php" />
         <option value="$PROJECT_DIR$/controllers/PosisiMotorController.php" />
         <option value="$PROJECT_DIR$/controllers/KondisiMotorController.php" />
+        <option value="$PROJECT_DIR$/views/motor/chart.php" />
       </list>
     </option>
   </component>
@@ -591,8 +559,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -621,7 +587,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -635,12 +601,18 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="motor" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -702,9 +674,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19033675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19033675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10837439" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22620791" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1002,7 +974,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="67" selection-start-line="39" selection-start-column="67" selection-end-line="39" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1010,7 +981,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1018,7 +988,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="34" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1034,7 +1002,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1042,9 +1009,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-          <folding>
-            <element signature="e#587#1011#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1052,7 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="161" column="67" selection-start-line="161" selection-start-column="67" selection-end-line="161" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,63 +1023,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="25.153847">
           <caret line="340" column="157" selection-start-line="340" selection-start-column="157" selection-end-line="340" selection-end-column="157" />
-          <folding>
-            <element signature="e#5394#5455#0#PHP" expanded="false" />
-            <element signature="e#5460#5523#0#PHP" expanded="false" />
-            <element signature="e#5528#5588#0#PHP" expanded="false" />
-            <element signature="e#5593#5653#0#PHP" expanded="false" />
-            <element signature="e#5658#5719#0#PHP" expanded="false" />
-            <element signature="e#5724#5786#0#PHP" expanded="false" />
-            <element signature="e#5791#5853#0#PHP" expanded="false" />
-            <element signature="e#5858#5920#0#PHP" expanded="false" />
-            <element signature="e#5925#5989#0#PHP" expanded="false" />
-            <element signature="e#5994#6057#0#PHP" expanded="false" />
-            <element signature="e#6062#6125#0#PHP" expanded="false" />
-            <element signature="e#6130#6197#0#PHP" expanded="false" />
-            <element signature="e#6202#6269#0#PHP" expanded="false" />
-            <element signature="e#6274#6340#0#PHP" expanded="false" />
-            <element signature="e#6346#6413#0#PHP" expanded="false" />
-            <element signature="e#6418#6492#0#PHP" expanded="false" />
-            <element signature="e#6497#6563#0#PHP" expanded="false" />
-            <element signature="e#6568#6632#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/motor/chart.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.807692">
-          <caret line="374" column="138" selection-start-line="374" selection-start-column="138" selection-end-line="374" selection-end-column="138" />
-          <folding>
-            <element signature="e#5997#6058#0#PHP" expanded="false" />
-            <element signature="e#6063#6126#0#PHP" expanded="false" />
-            <element signature="e#6131#6191#0#PHP" expanded="false" />
-            <element signature="e#6196#6255#0#PHP" expanded="false" />
-            <element signature="e#6260#6311#0#PHP" expanded="false" />
-            <element signature="e#6316#6368#0#PHP" expanded="false" />
-            <element signature="e#6373#6435#0#PHP" expanded="false" />
-            <element signature="e#6440#6491#0#PHP" expanded="false" />
-            <element signature="e#6496#6557#0#PHP" expanded="false" />
-            <element signature="e#6562#6623#0#PHP" expanded="false" />
-            <element signature="e#6628#6690#0#PHP" expanded="false" />
-            <element signature="e#6695#6757#0#PHP" expanded="false" />
-            <element signature="e#6762#6826#0#PHP" expanded="false" />
-            <element signature="e#6831#6896#0#PHP" expanded="false" />
-            <element signature="e#6901#6963#0#PHP" expanded="false" />
-            <element signature="e#6968#7033#0#PHP" expanded="false" />
-            <element signature="e#7038#7098#0#PHP" expanded="false" />
-            <element signature="e#7103#7163#0#PHP" expanded="false" />
-            <element signature="e#7169#7236#0#PHP" expanded="false" />
-            <element signature="e#7241#7315#0#PHP" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#li#6;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#li#14;n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/posisi-motor/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-31.384615">
+        <state vertical-scroll-proportion="0.0">
           <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
           <folding />
         </state>
@@ -1124,7 +1036,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/PosisiMotor.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-26.115385">
+        <state vertical-scroll-proportion="0.0">
           <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="48" />
           <folding />
         </state>
@@ -1132,7 +1044,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/PosisiMotorSearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.384615">
+        <state vertical-scroll-proportion="0.0">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="50" />
           <folding />
         </state>
@@ -1140,7 +1052,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/KondisiMotorSearch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.076923">
+        <state vertical-scroll-proportion="0.0">
           <caret line="51" column="0" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="50" />
           <folding />
         </state>
@@ -1148,7 +1060,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/MotorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
+        <state vertical-scroll-proportion="0.0">
           <caret line="930" column="34" selection-start-line="930" selection-start-column="34" selection-end-line="930" selection-end-column="34" />
           <folding>
             <element signature="e#379#630#0#PHP" expanded="false" />
@@ -1427,7 +1339,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/PembeliController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
+        <state vertical-scroll-proportion="0.0">
           <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
           <folding>
             <marker date="1458720362968" expanded="true" signature="1706:1827" placeholder="insert into logs..." />
@@ -1438,7 +1350,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/PosisiMotorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.230769">
+        <state vertical-scroll-proportion="0.0">
           <caret line="76" column="46" selection-start-line="76" selection-start-column="46" selection-end-line="76" selection-end-column="46" />
           <folding>
             <marker date="1459397469475" expanded="true" signature="1801:1954" placeholder="insert into logs..." />
@@ -1450,7 +1362,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/KondisiMotorController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.3846154">
+        <state vertical-scroll-proportion="0.0">
           <caret line="101" column="46" selection-start-line="101" selection-start-column="46" selection-end-line="101" selection-end-column="46" />
           <folding>
             <marker date="1459397481156" expanded="true" signature="1812:1979" placeholder="insert into logs..." />
@@ -1462,8 +1374,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/PenjualanController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.190184">
-          <caret line="272" column="0" selection-start-line="272" selection-start-column="0" selection-end-line="272" selection-end-column="0" />
+        <state vertical-scroll-proportion="-49.692307">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
           <folding>
             <element signature="e#1844#4098#0#PHP" expanded="false" />
             <element signature="e#4295#6562#0#PHP" expanded="false" />
@@ -1485,6 +1397,35 @@
             <marker date="1459397283928" expanded="false" signature="9548:9565" placeholder="..." />
             <marker date="1459397283928" expanded="true" signature="9660:9793" placeholder="..." />
             <marker date="1459397283928" expanded="false" signature="9740:9757" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/motor/chart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.799591">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#5997#6058#0#PHP" expanded="false" />
+            <element signature="e#6063#6126#0#PHP" expanded="false" />
+            <element signature="e#6131#6191#0#PHP" expanded="false" />
+            <element signature="e#6196#6255#0#PHP" expanded="false" />
+            <element signature="e#6260#6311#0#PHP" expanded="false" />
+            <element signature="e#6316#6368#0#PHP" expanded="false" />
+            <element signature="e#6373#6435#0#PHP" expanded="false" />
+            <element signature="e#6440#6491#0#PHP" expanded="false" />
+            <element signature="e#6496#6557#0#PHP" expanded="false" />
+            <element signature="e#6562#6623#0#PHP" expanded="false" />
+            <element signature="e#6628#6690#0#PHP" expanded="false" />
+            <element signature="e#6695#6757#0#PHP" expanded="false" />
+            <element signature="e#6762#6826#0#PHP" expanded="false" />
+            <element signature="e#6831#6896#0#PHP" expanded="false" />
+            <element signature="e#6901#6963#0#PHP" expanded="false" />
+            <element signature="e#6968#7033#0#PHP" expanded="false" />
+            <element signature="e#7038#7098#0#PHP" expanded="false" />
+            <element signature="e#7103#7163#0#PHP" expanded="false" />
+            <element signature="e#7169#7236#0#PHP" expanded="false" />
+            <element signature="e#7241#7315#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

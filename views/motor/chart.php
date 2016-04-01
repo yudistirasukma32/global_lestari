@@ -292,9 +292,9 @@ $kondisi2 =  \app\models\Motor::find()
                                     ['name' => 'Kristal','y'=> $kristal],
                                     ['name' => 'Super Fix','y'=> $superfix],
                                     ['name' => 'Dream D','y'=> $dream],
+                                    ['name' => 'JRD','y'=> $jrd],
                                     ['name' => 'New Super Fix','y'=> $newsuper],
-                                    ['name' => 'BMX','y'=> $bmx],
-                                    ['name' => 'BMX','y'=> $jrd]],
+                                    ['name' => 'BMX','y'=> $bmx]],
                             ],
                             //['name' => 'Laku', 'data' => [$bravo_laku, 1, 2, 0, 1]],
                         ]
