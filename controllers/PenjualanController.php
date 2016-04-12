@@ -210,9 +210,7 @@ class PenjualanController extends Controller
                 INNER JOIN jenis_motor d
                 ON c.id_jenis = d.id
                 INNER JOIN faktur e
-                ON a.id = e.id_penjualan
-                INNER JOIN surat_jalan f
-                ON e.id = f.id_faktur';
+                ON a.id = e.id_penjualan';
         //$model = Penjualan::findBySql($sql)->all();
         $model = $connection->createCommand($sql);
         $penjualan = $model->queryAll();
