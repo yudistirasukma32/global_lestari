@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e69c274-ca8f-4e61-ab6d-c6c39f82b00f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dump/global_lestari_finale.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/FakturController.php" afterPath="$PROJECT_DIR$/controllers/FakturController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/motor/chart.php" afterPath="$PROJECT_DIR$/views/motor/chart.php" />
     </list>
     <ignored path="global_lestari.iws" />
@@ -33,326 +33,39 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MotorController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/MotorController.php">
+      <file leaf-file-name="Faktur.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/Faktur.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="930" column="34" selection-start-line="930" selection-start-column="34" selection-end-line="930" selection-end-column="34" />
+            <state vertical-scroll-proportion="9.153846">
+              <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/faktur/_form.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.3846154">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
-                <element signature="e#379#630#0#PHP" expanded="false" />
-                <element signature="e#1194#1334#0#PHP" expanded="false" />
-                <element signature="e#1340#1725#0#PHP" expanded="false" />
-                <element signature="e#1731#2128#0#PHP" expanded="false" />
-                <element signature="e#2134#2529#0#PHP" expanded="false" />
-                <element signature="e#2691#3904#0#PHP" expanded="false" />
-                <element signature="e#4096#4445#0#PHP" expanded="false" />
-                <element signature="e#4640#5106#0#PHP" expanded="false" />
-                <element signature="e#8246#10292#0#PHP" expanded="false" />
-                <element signature="e#10298#12352#0#PHP" expanded="false" />
-                <element signature="e#12358#14400#0#PHP" expanded="false" />
-                <element signature="e#14406#16456#0#PHP" expanded="false" />
-                <element signature="e#16462#18516#0#PHP" expanded="false" />
-                <element signature="e#18522#20570#0#PHP" expanded="false" />
-                <element signature="e#20576#22623#0#PHP" expanded="false" />
-                <element signature="e#22629#24673#0#PHP" expanded="false" />
-                <element signature="e#24679#26719#0#PHP" expanded="false" />
-                <element signature="e#26725#28793#0#PHP" expanded="false" />
-                <element signature="e#31891#33897#0#PHP" expanded="false" />
-                <element signature="e#33903#35917#0#PHP" expanded="false" />
-                <element signature="e#35923#37870#0#PHP" expanded="false" />
-                <element signature="e#37876#39831#0#PHP" expanded="false" />
-                <element signature="e#39837#41796#0#PHP" expanded="false" />
-                <element signature="e#41802#43828#0#PHP" expanded="false" />
-                <element signature="e#43834#45859#0#PHP" expanded="false" />
-                <element signature="e#45865#47887#0#PHP" expanded="false" />
-                <element signature="e#47893#49911#0#PHP" expanded="false" />
-                <element signature="e#49981#53040#0#PHP" expanded="false" />
-                <element signature="e#53046#55086#0#PHP" expanded="false" />
-                <element signature="e#55092#57140#0#PHP" expanded="false" />
-                <element signature="e#57146#59183#0#PHP" expanded="false" />
-                <element signature="e#59189#61233#0#PHP" expanded="false" />
-                <element signature="e#61239#63287#0#PHP" expanded="false" />
-                <element signature="e#63293#65337#0#PHP" expanded="false" />
-                <element signature="e#65343#67386#0#PHP" expanded="false" />
-                <element signature="e#67392#69432#0#PHP" expanded="false" />
-                <element signature="e#69438#71474#0#PHP" expanded="false" />
-                <element signature="e#71482#74562#0#PHP" expanded="false" />
-                <marker date="1458702997033" expanded="true" signature="3169:3359" placeholder="insert into logs..." />
-                <marker date="1458702997033" expanded="true" signature="4841:4943" placeholder="insert into logs..." />
-                <marker date="1458702997033" expanded="true" signature="5269:5672" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="6016:6141" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="6036:6055" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="6254:6541" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="6271:6524" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="6615:6990" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="7061:7380" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="7061:7711" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="7423:7711" placeholder="SELECT &quot;JUML..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="7857:7858" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="7857:7989" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="7873:7989" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="7890:7972" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="8063:8182" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="8339:8932" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="9268:9385" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="9288:9307" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="9498:9572" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="9498:9788" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="9515:9572" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="9862:10235" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="10393:10988" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="11326:11445" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="11346:11365" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="11558:11848" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="11575:11831" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="11922:12295" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="12450:13042" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="13377:13493" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="13397:13416" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="13606:13896" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="13623:13879" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="13970:14343" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="14500:15094" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="15431:15549" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="15451:15470" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="15662:15952" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="15679:15935" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="16026:16399" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="16557:17152" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="17490:17609" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="17510:17529" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="17722:18012" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="17739:17995" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="18086:18459" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="18616:19208" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="19545:19663" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="19565:19584" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="19776:20066" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="19793:20049" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="20140:20513" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="20668:21258" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="21596:21716" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="21616:21635" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="21829:22119" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="21846:22102" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="22193:22566" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="22722:23312" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="23648:23766" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="23668:23687" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="23879:24169" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="23896:24152" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="24243:24616" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="24771:25361" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="25696:25812" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="25716:25735" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="25925:26215" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="25942:26198" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="26289:26662" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="26821:27415" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="27756:27878" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="27776:27795" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="27991:28281" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="28008:28264" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="28355:28728" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="28952:29278" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="28952:29279" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="28952:29346" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="28952:29457" placeholder="SELECT d.nam..." />
-                <marker date="1458702997033" expanded="true" signature="29688:29804" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="29708:29727" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="29917:30204" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="29934:30187" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="30278:30653" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="30724:31034" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="30724:31356" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="30724:31461" placeholder="SELECT d.nam..." />
-                <marker date="1458702997033" expanded="true" signature="31077:31356" placeholder="SELECT &quot;TOTA..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="31502:31634" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="31518:31634" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="31535:31617" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="31708:31827" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="31982:32548" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="32882:32990" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="32902:32921" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="33103:33393" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="33120:33376" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="33467:33840" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="33996:34564" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="34900:35010" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="34920:34939" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="35123:35413" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="35140:35396" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="35487:35860" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="36013:36523" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="36856:36963" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="36876:36895" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="37076:37366" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="37093:37349" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="37440:37813" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="37968:38480" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="38815:38924" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="38835:38854" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="39037:39327" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="39054:39310" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="39401:39774" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="39930:40443" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="40779:40889" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="40799:40818" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="41002:41292" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="41019:41275" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="41366:41739" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="41894:42477" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="42812:42921" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="42832:42851" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="43034:43324" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="43051:43307" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="43398:43771" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="43924:44505" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="44841:44952" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="44861:44880" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="45065:45355" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="45082:45338" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="45429:45802" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="45956:46537" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="46871:46980" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="46891:46910" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="47093:47383" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="47110:47366" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="47457:47830" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="47983:48564" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="48897:49004" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="48917:48936" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="49117:49407" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="49134:49390" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="49481:49854" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="50073:50476" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="50819:50943" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="50839:50858" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="51056:51343" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="51073:51326" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="51417:51792" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="51863:52181" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="51863:52511" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="51863:52616" placeholder="SELECT d.nam..." />
-                <marker date="1458702997033" expanded="true" signature="52224:52511" placeholder="SELECT &quot;TOTA..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="52657:52789" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="52673:52789" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="52690:52772" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="52863:52982" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="53138:53728" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="54063:54179" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="54083:54102" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="54292:54582" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="54309:54565" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="54656:55029" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="55186:55778" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="56115:56233" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="56135:56154" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="56346:56636" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="56363:56619" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="56710:57083" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="57237:57827" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="58161:58276" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="58181:58200" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="58389:58679" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="58406:58662" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="58753:59126" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="59282:59873" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="60209:60326" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="60229:60248" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="60439:60729" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="60456:60712" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="60803:61176" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="61333:61925" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="62262:62380" placeholder="..." />
-                <marker date="1458702997033" expanded="false" signature="62282:62301" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="62493:62783" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="62510:62766" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="62857:63230" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="62994:63230" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="63386:63977" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="64313:64430" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="64333:64352" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="64543:64833" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="64560:64816" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="64907:65280" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="65434:66023" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="66360:66479" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="66380:66399" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="66592:66882" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="66609:66865" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="66956:67329" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="67484:68073" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="68408:68525" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="68428:68447" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="68638:68928" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="68655:68911" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="69002:69375" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="69529:70118" placeholder="SELECT d.nam..motor..." />
-                <marker date="1458702997033" expanded="true" signature="70452:70567" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="70472:70491" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="70680:70970" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="70697:70953" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="71044:71417" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="71566:71963" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="72304:72477" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="72324:72343" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="72590:72877" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="72607:72860" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="72951:73326" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="73397:73710" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="73397:74033" placeholder="SELECT d.nam..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="73397:74138" placeholder="SELECT d.nam..." />
-                <marker date="1458702997033" expanded="true" signature="73751:74023" placeholder="SELECT &quot;TOTA..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="73751:74033" placeholder="SELECT &quot;TOTA..Motor..." />
-                <marker date="1458702997033" expanded="true" signature="74179:74311" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="74195:74311" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="74212:74294" placeholder="..." />
-                <marker date="1458702997033" expanded="true" signature="74385:74504" placeholder="..." />
+                <marker date="1458719381011" expanded="true" signature="250:584" placeholder="SELECT a.id,..penjualan..." />
+                <marker date="1458719381011" expanded="true" signature="538:569" placeholder="Select id_pe..faktur..." />
+                <marker date="1458719381011" expanded="true" signature="608:891" placeholder="SELECT a.id,..penjualan..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PembeliController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/PembeliController.php">
+      <file leaf-file-name="FakturController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/FakturController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="50" selection-start-line="69" selection-start-column="50" selection-end-line="69" selection-end-column="50" />
+            <state vertical-scroll-proportion="-0.042944785">
+              <caret line="169" column="25" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
               <folding>
-                <marker date="1458720362968" expanded="true" signature="1706:1827" placeholder="insert into logs..." />
-                <marker date="1458720362968" expanded="true" signature="3075:3217" placeholder="insert into logs..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chart.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/motor/chart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.799591">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="e#5997#6058#0#PHP" expanded="false" />
-                <element signature="e#6063#6126#0#PHP" expanded="false" />
-                <element signature="e#6131#6191#0#PHP" expanded="false" />
-                <element signature="e#6196#6255#0#PHP" expanded="false" />
-                <element signature="e#6260#6311#0#PHP" expanded="false" />
-                <element signature="e#6316#6368#0#PHP" expanded="false" />
-                <element signature="e#6373#6435#0#PHP" expanded="false" />
-                <element signature="e#6440#6491#0#PHP" expanded="false" />
-                <element signature="e#6496#6557#0#PHP" expanded="false" />
-                <element signature="e#6562#6623#0#PHP" expanded="false" />
-                <element signature="e#6628#6690#0#PHP" expanded="false" />
-                <element signature="e#6695#6757#0#PHP" expanded="false" />
-                <element signature="e#6762#6826#0#PHP" expanded="false" />
-                <element signature="e#6831#6896#0#PHP" expanded="false" />
-                <element signature="e#6901#6963#0#PHP" expanded="false" />
-                <element signature="e#6968#7033#0#PHP" expanded="false" />
-                <element signature="e#7038#7098#0#PHP" expanded="false" />
-                <element signature="e#7103#7163#0#PHP" expanded="false" />
-                <element signature="e#7169#7236#0#PHP" expanded="false" />
-                <element signature="e#7241#7315#0#PHP" expanded="false" />
+                <marker date="1460433578165" expanded="true" signature="2659:2793" placeholder="insert into logs..." />
+                <marker date="1460433578165" expanded="true" signature="4471:4605" placeholder="insert into logs..." />
+                <marker date="1460433578165" expanded="true" signature="5668:5779" placeholder="insert into logs..." />
               </folding>
             </state>
           </provider>
@@ -429,7 +142,7 @@
       <file leaf-file-name="PenjualanController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/PenjualanController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-49.692307">
+            <state vertical-scroll-proportion="0.0">
               <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
               <folding>
                 <element signature="e#1844#4098#0#PHP" expanded="false" />
@@ -476,7 +189,6 @@
         <option value="$PROJECT_DIR$/models/LogsSearch.php" />
         <option value="$PROJECT_DIR$/views/jenis-motor/index.php" />
         <option value="$PROJECT_DIR$/views/logs/index.php" />
-        <option value="$PROJECT_DIR$/controllers/FakturController.php" />
         <option value="$PROJECT_DIR$/views/faktur/_search.php" />
         <option value="$PROJECT_DIR$/models/SuratJalanSearch.php" />
         <option value="$PROJECT_DIR$/views/surat-jalan/index.php" />
@@ -516,6 +228,7 @@
         <option value="$PROJECT_DIR$/controllers/PosisiMotorController.php" />
         <option value="$PROJECT_DIR$/controllers/KondisiMotorController.php" />
         <option value="$PROJECT_DIR$/views/motor/chart.php" />
+        <option value="$PROJECT_DIR$/controllers/FakturController.php" />
       </list>
     </option>
   </component>
@@ -559,6 +272,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -605,14 +320,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="motor" />
+              <option name="myItemId" value="faktur" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_lestari" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="basic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="global_lestari" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -673,7 +414,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19033675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -739,13 +480,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/dektrium/yii2-user/models/Token.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="54.923077">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/dektrium/yii2-user/models/LoginForm.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="43.153847">
@@ -921,13 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/faktur/_form.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.8076925">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/pembeli/view.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.576923">
@@ -1005,13 +732,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/Faktur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/motor/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1023,38 +743,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="25.153847">
           <caret line="340" column="157" selection-start-line="340" selection-start-column="157" selection-end-line="340" selection-end-column="157" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/posisi-motor/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/PosisiMotor.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/PosisiMotorSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/KondisiMotorSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1348,6 +1036,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/motor/chart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3461537">
+          <caret line="419" column="26" selection-start-line="419" selection-start-column="26" selection-end-line="419" selection-end-column="26" />
+          <folding>
+            <element signature="e#5997#6058#0#PHP" expanded="false" />
+            <element signature="e#6063#6126#0#PHP" expanded="false" />
+            <element signature="e#6131#6191#0#PHP" expanded="false" />
+            <element signature="e#6196#6255#0#PHP" expanded="false" />
+            <element signature="e#6260#6311#0#PHP" expanded="false" />
+            <element signature="e#6316#6368#0#PHP" expanded="false" />
+            <element signature="e#6373#6435#0#PHP" expanded="false" />
+            <element signature="e#6440#6491#0#PHP" expanded="false" />
+            <element signature="e#6496#6557#0#PHP" expanded="false" />
+            <element signature="e#6562#6623#0#PHP" expanded="false" />
+            <element signature="e#6628#6690#0#PHP" expanded="false" />
+            <element signature="e#6695#6757#0#PHP" expanded="false" />
+            <element signature="e#6762#6826#0#PHP" expanded="false" />
+            <element signature="e#6831#6896#0#PHP" expanded="false" />
+            <element signature="e#6901#6963#0#PHP" expanded="false" />
+            <element signature="e#7044#7104#0#PHP" expanded="false" />
+            <element signature="e#7109#7169#0#PHP" expanded="false" />
+            <element signature="e#7175#7242#0#PHP" expanded="false" />
+            <element signature="e#7247#7321#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/posisi-motor/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="42" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/PosisiMotorController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1372,9 +1096,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/PosisiMotor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="59" column="12" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/PosisiMotorSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/KondisiMotorSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/PenjualanController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-49.692307">
+        <state vertical-scroll-proportion="0.0">
           <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
           <folding>
             <element signature="e#1844#4098#0#PHP" expanded="false" />
@@ -1401,31 +1149,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/motor/chart.php">
+    <entry file="file://$PROJECT_DIR$/models/Faktur.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.799591">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="9.153846">
+          <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/faktur/_form.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.3846154">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="e#5997#6058#0#PHP" expanded="false" />
-            <element signature="e#6063#6126#0#PHP" expanded="false" />
-            <element signature="e#6131#6191#0#PHP" expanded="false" />
-            <element signature="e#6196#6255#0#PHP" expanded="false" />
-            <element signature="e#6260#6311#0#PHP" expanded="false" />
-            <element signature="e#6316#6368#0#PHP" expanded="false" />
-            <element signature="e#6373#6435#0#PHP" expanded="false" />
-            <element signature="e#6440#6491#0#PHP" expanded="false" />
-            <element signature="e#6496#6557#0#PHP" expanded="false" />
-            <element signature="e#6562#6623#0#PHP" expanded="false" />
-            <element signature="e#6628#6690#0#PHP" expanded="false" />
-            <element signature="e#6695#6757#0#PHP" expanded="false" />
-            <element signature="e#6762#6826#0#PHP" expanded="false" />
-            <element signature="e#6831#6896#0#PHP" expanded="false" />
-            <element signature="e#6901#6963#0#PHP" expanded="false" />
-            <element signature="e#6968#7033#0#PHP" expanded="false" />
-            <element signature="e#7038#7098#0#PHP" expanded="false" />
-            <element signature="e#7103#7163#0#PHP" expanded="false" />
-            <element signature="e#7169#7236#0#PHP" expanded="false" />
-            <element signature="e#7241#7315#0#PHP" expanded="false" />
+            <marker date="1458719381011" expanded="true" signature="250:584" placeholder="SELECT a.id,..penjualan..." />
+            <marker date="1458719381011" expanded="true" signature="538:569" placeholder="Select id_pe..faktur..." />
+            <marker date="1458719381011" expanded="true" signature="608:891" placeholder="SELECT a.id,..penjualan..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/FakturController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.042944785">
+          <caret line="169" column="25" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
+          <folding>
+            <marker date="1460433578165" expanded="true" signature="2659:2793" placeholder="insert into logs..." />
+            <marker date="1460433578165" expanded="true" signature="4471:4605" placeholder="insert into logs..." />
+            <marker date="1460433578165" expanded="true" signature="5668:5779" placeholder="insert into logs..." />
           </folding>
         </state>
       </provider>

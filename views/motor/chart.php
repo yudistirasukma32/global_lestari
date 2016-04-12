@@ -204,9 +204,9 @@ $kondisi2 =  \app\models\Motor::find()
     foreach($stok16 as $data){
         $dream = $data['id'];
     }
-    foreach($stok19 as $data){
-        $newsuper = $data['id'];
-    }
+//    foreach($stok19 as $data){
+//        $newsuper = $data['id'];
+//    }
     foreach($stok20 as $data){
         $bmx = $data['id'];
     }
@@ -257,7 +257,7 @@ $kondisi2 =  \app\models\Motor::find()
                                 'Kristal',
                                 'Super Fix',
                                 'Dream D',
-                                'New Super Fix',
+//                                'New Super Fix',
                                 'BMX',
                                 'JRD Arjuna'
                             ]
@@ -293,7 +293,7 @@ $kondisi2 =  \app\models\Motor::find()
                                     ['name' => 'Super Fix','y'=> $superfix],
                                     ['name' => 'Dream D','y'=> $dream],
                                     ['name' => 'JRD','y'=> $jrd],
-                                    ['name' => 'New Super Fix','y'=> $newsuper],
+//                                    ['name' => 'New Super Fix','y'=> $newsuper],
                                     ['name' => 'BMX','y'=> $bmx]],
                             ],
                             //['name' => 'Laku', 'data' => [$bravo_laku, 1, 2, 0, 1]],
@@ -363,16 +363,16 @@ $kondisi2 =  \app\models\Motor::find()
                         <span class="badge" style="background-color: mediumpurple;"><?= $jrd; ?></span>
                         JRD Arjuna
                     </li>
-                    <li class="list-group-item">
-                        <span class="badge" style="background-color: deeppink;"><?= $newsuper; ?></span>
-                        New Super Fix
-                    </li>
+<!--                    <li class="list-group-item">-->
+<!--                        <span class="badge" style="background-color: deeppink;">--><?//= $newsuper; ?><!--</span>-->
+<!--                        New Super Fix-->
+<!--                    </li>-->
                     <li class="list-group-item">
                         <span class="badge" style="background-color: #ccd232;"><?= $bmx; ?></span>
                         BMX
                     </li>
                     <li class="list-group-item">
-                        <span class="badge"><?= $bravo+$maxi+$sco+$trooper+$exo+$exel+$bla+$sporty+$city+$focus+$smart+$newsuper+$bmx+$jrd+$dream+$superfix+$kristal; ?></span>
+                        <span class="badge"><?= $bravo+$maxi+$sco+$trooper+$exo+$exel+$bla+$sporty+$city+$focus+$smart+$bmx+$jrd+$dream+$superfix+$kristal; ?></span>
                         Total
                     </li>
                 </ul>

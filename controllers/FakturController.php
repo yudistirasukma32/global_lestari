@@ -80,11 +80,11 @@ class FakturController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             try{
                 $picture = UploadedFile::getInstance($model, 'foto');
-                $model->foto = 'FAKTUR - '.$_POST['Faktur']['nama_penerima'].'-'.$_POST['Faktur']['tgl'].'.'.$picture->extension;
+                $model->foto = 'FAKTUR - '.$_POST['Faktur']['nama_penerima'].'-'.$_POST['Faktur']['tgl_faktur'].'.'.$picture->extension;
 
                 if($model->save()){
 
-                    $picture->saveAs('uploads/faktur/' . 'FAKTUR - '. $model->nama_penerima.'-'.$model->tgl.'.'.$picture->extension);
+                    $picture->saveAs('uploads/faktur/' . 'FAKTUR - '. $model->nama_penerima.'-'.$model->tgl_faktur.'.'.$picture->extension);
                     Yii::$app->getSession()->setFlash('success','Data saved!');
 
                     $id_faktur = $model->id;
@@ -125,7 +125,7 @@ class FakturController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             try{
                 $picture = UploadedFile::getInstance($model, 'foto');
-                $model->foto = 'FAKTUR - '.$_POST['Faktur']['nama_penerima'].'-'.$_POST['Faktur']['tgl'].'.'.$picture->extension;
+                $model->foto = 'FAKTUR - '.$_POST['Faktur']['nama_penerima'].'-'.$_POST['Faktur']['tgl_faktur'].'.'.$picture->extension;
 
                 if($model->save()){
 
@@ -133,7 +133,7 @@ class FakturController extends Controller
                     $no_faktur = $model->no_faktur;
                     $user = Yii::$app->user->identity->username;
 
-                    $picture->saveAs('uploads/faktur/' .'FAKTUR - '. $model->nama_penerima.'-'.$model->tgl.'.'.$picture->extension);
+                    $picture->saveAs('uploads/faktur/' .'FAKTUR - '. $model->nama_penerima.'-'.$model->tgl_faktur.'.'.$picture->extension);
                     Yii::$app->getSession()->setFlash('success','Data saved!');
 
                     Yii::$app->db->createCommand('insert into logs (date, logs) VALUES (now(),"Update data faktur dengan id : '.$id_faktur.' ('.$no_faktur.') // oleh user : '.$user.'")')
